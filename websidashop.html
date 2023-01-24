@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>Mamma Höna</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = sessionStorage.clickcount;
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+	<style>
+		  body {
+
+
+    font-size: 36px;
+
+}
+
+
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 25px solid red;
+  background-color: white;
+  width: 50%;
+}
+
+.centera {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid yellow;
+  background-color: white;
+  width: 50%;
+}
+
+    a:link {
+    color: #FF0004;
+}
+a:visited {
+    color: #FF0004;
+}
+a:hover {
+    color: #FF3E41;
+}
+a:active {
+    color: #FF0004;
+}
+    .center1 {  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 25px solid red;
+
+  width: 50%;
+}
+    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body bgcolor="#0024FF">
+
+  <h1 style="color: #FF0004">Mamma Hönas Kyckling</h1>
+ <table width="100%" border="4" bordercolor=#F8FF00>
+   <tbody bgcolor="#FFFFFF">
+     <tr>
+       <td><span style="color: #FFFFFF">awdawdawdawd</span><img src="1j+ojVNGOMkX9W2+J1iwiG2pif+CqR5GnQiIiWcqL2VE9ApklyUph...Zr8g==" width="254" height="153" alt=""/></td>
+       <td style="font-size: 50px; color: #FF0004; text-align: center;"><a href="websida.html">Start</a></td>
+       <td style="font-size: 50px; color: #FF0004; text-align: center;"><a href="websidanyheter.html">Nyheter</a></td>
+       <td style="font-size: 50px; color: #FF0004; text-align: center;"><a href="websidakontakt.html">Kontakta oss</a></td>
+	   <td style="font-size: 50px; color: #FF0004; text-align: center;"><img src="nedladdning1.png" width="170" height="130" alt=""/><div id="result"></div>
+</td>
+       <td><span style="color: #FFFFFF">awdawdawdawd</span><img src="1j+ojVNGOMkX9W2+J1iwiG2pif+CqR5GnQiIiWcqL2VE9ApklyUph...Zr8g==" width="254" height="153" alt=""/></td>
+     </tr>
+   </tbody>
+ </table>
+
+<h4 style="font-size: 36px; color: #FF0004;">Bästa kyckling i stada</h4>
+
+<img src="nedladdning.jpg" width="1100" height="732" class="center" />
+<p style="text-align: center">
+  <button onclick="clickCounter()" type="button">Add to cart</button>
+</p>
+
+
+<p style="text-align: center">© The Mamma Höna Company™, All Rights Reserved</p>
+
+</body>
+</html>
