@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  border-style: transparent;
+  grid-area: header;
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'contentOut contentOut contentOut contentOut contentOut contentOut' 
+    'left middle middle middle right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+}
+
+.contentOut{
+  border-style: transparent;
+  grid-area: contentOut;
+  padding: 60px;
+  text-align: center;
+  font-size: 35px;
+  /*width: 300px;*/
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'contentOut contentOut contentOut contentOut contentOut contentOut' 
+    'left middle right right right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+}
+.contentIn{
+  border-style: transparent;
+  grid-area: contentOut;
+  background-color: #BFE4F4;
+  padding: 0px;
+  text-align: center;
+  font-size: 35px;
+  /*width: 300px;*/
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'contentOut contentOut contentOut contentOut contentOut contentOut' 
+    'left middle right right right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+  grid-row-gap: 0px;
+}
+
+
+/* The grid container */
+.grid-container {
+  border-style: transparent;
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'contentOut contentOut contentOut contentOut contentOut contentOut' 
+    'left middle right right right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+  grid-row-gap: 10px;
+} 
+
+.left,
+.middle,
+.right {
+
+  border-style: solid   ;
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+  border-style: transparent;
+  grid-area: footer;
+  background-color: #BFE4F4;
+  padding: 15px;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'contentOut contentOut contentOut contentOut contentOut contentOut' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+  grid-row-gap: 10px;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+  .column {
+    width: 100%;}
+}
+
+a:link {
+    color: #060101;
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none;
+}
+a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+a:hover {
+    color: #BFE4F4;
+    text-decoration: none;
+}
+a:active {
+    color: #BFE4F4;
+    text-decoration: none;
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    background-color: #49c8ff;
+    border-radius: 50px;
+ 
+
+}
+
+h1{
+    align-items: left;
+    font-size: 32px;
+    font-style: normal;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+h2{
+    align-items: left;
+    font-size: 16px;
+    font-style: normal;
+    text-align: left;
+    padding-left: 30px;
+    
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<head> 
+    <div class="grid-container">
+        <div class="header">
+            <div class ="left">
+                <a href="index.html2"> <img src="logga.png" style="max-width: 20%;">  </a>
+            </div>
+            <div class="middle">
+            
+            
+                <a href="index.html2">Om Oss </a>
+                <a href="index.html2">Tävlingar</a>
+                <a href="index.html2">Kanot</a>
+                <a href="index.html2">Ungdomsverksamhet</a> 
+            </div>
+            
+            <div class="right">
+            <a href="index.html2">Kläder</a>
+            <a href="index.html2">Kontakt</a>
+            <a href="index.html2" class="button" >&nbsp;Nyheter&nbsp;</a>
+            </div>
+        </div>
+</head>
+<body>
+
+
+
+    <div class="grid-container">
+        <div class="header">
+            <div class ="left" style="background-color: #BFE4F4;">
+                <H1>Välkommen Till <br> Nynäshamns Segelsällskap <br></H1>
+                <h2>
+                NSS är en aktiv och betydelsefull aktör i  <br> Nynäshamn med en naturlig och mångårig  <br> 
+                verksamhet med inriktning på sjöliv, båtsport, <br> segling och ungdoms- verksamhet. <br>
+                NSS äger en förnämlig klubbanläggning, varv och<br> bryggor vid Fagerviken, många bryggor i <br> 
+                Trehörningsviken samt klubbholmen Lacka strax norr om Nynäshamn. 
+                        </h2>
+                    
+            </div>
+
+            <div class="right" style="background-color: #BFE4F4;">
+
+                <h2></h2>  
+            
+                <img src="batomoss.jpg">
+
+                <h2></h2>
+            </div>
+        </div>
+   
+        <div class ="left" style="background-color: #BFE4F4;"><H1>Välkommen Till <br> Nynäshamns Segelsällskap <br></H1>
+            <h2>
+            NSS är en aktiv och betydelsefull aktör i  <br> Nynäshamn med en naturlig och mångårig  <br> 
+            verksamhet med inriktning på sjöliv, båtsport, <br> segling och ungdoms- verksamhet. <br>
+            NSS äger en förnämlig klubbanläggning, varv och<br> bryggor vid Fagerviken, många bryggor i <br> 
+            Trehörningsviken samt klubbholmen Lacka strax norr om Nynäshamn. 
+            </h2>
+                
+        </div>
+
+        <div class ="middle" style="background-color: #BFE4F4;">
+            <H1>Välkommen Till <br> Nynäshamns Segelsällskap <br></H1>
+            <h2>
+            NSS är en aktiv och betydelsefull aktör i  <br> Nynäshamn med en naturlig och mångårig  <br> 
+            verksamhet med inriktning på sjöliv, båtsport, <br> segling och ungdoms- verksamhet. <br>
+            NSS äger en förnämlig klubbanläggning, varv och<br> bryggor vid Fagerviken, många bryggor i <br> 
+            Trehörningsviken samt klubbholmen Lacka strax norr om Nynäshamn. 
+            </h2>
+                
+        </div>
+
+        <div class="right" style="background-color: #BFE4F4;">
+
+            <h2></h2>  
+
+            <img src="batomoss.jpg">
+
+            <h2></h2>
+        </div>
+    
+        <div class="footer">
+            <div class="left" style="background-color: #BFE4F4;">
+                Öppettider <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                Kontakta Oss
+            </div>
+        
+            <div class="right" style="background-color: #BFE4F4;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.
+                4562557675717!2d17.941270816054566!3d58.89023678150737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
+                4f13.1!3m3!1m2!1s0x465f5ea05a12739b%3A0x95f7354abfef82c7!2sNyn%C3%A4shamns%20Segels%C3%A4llskap!5e0!3m2!1ssv!2sse!4v1674645100008!5m2!1ssv!2sse" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

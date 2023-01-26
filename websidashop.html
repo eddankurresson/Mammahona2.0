@@ -1,98 +1,139 @@
-<html>
+<!DOCTYPE html>
 <head>
-    <title>Mamma Höna</title>
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
-<script>
-function clickCounter() {
-  if (typeof(Storage) !== "undefined") {
-    if (sessionStorage.clickcount) {
-      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
-    } else {
-      sessionStorage.clickcount = 1;
-    }
-    document.getElementById("result").innerHTML = sessionStorage.clickcount;
-  } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-  }
-}
-</script>
-	<style>
-		  body {
-
-
-    font-size: 36px;
-
-}
-
-
-
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: 25px solid red;
-  background-color: white;
-  width: 50%;
-}
-
-.centera {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: 5px solid yellow;
-  background-color: white;
-  width: 50%;
-}
-
-    a:link {
-    color: #FF0004;
-}
-a:visited {
-    color: #FF0004;
-}
-a:hover {
-    color: #FF3E41;
-}
-a:active {
-    color: #FF0004;
-}
-    .center1 {  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: 25px solid red;
-
-  width: 50%;
-}
-    </style>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:300,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+  
 </head>
-<body bgcolor="#0024FF">
+<html>
+ <style>
+ body {
+	font-family: Raleway, sans-serif;
 
-  <h1 style="color: #FF0004">Mamma Hönas Kyckling</h1>
- <table width="100%" border="4" bordercolor=#F8FF00>
-   <tbody bgcolor="#FFFFFF">
-     <tr>
-       <td><span style="color: #FFFFFF">awdawdawdawd</span><img src="1j+ojVNGOMkX9W2+J1iwiG2pif+CqR5GnQiIiWcqL2VE9ApklyUph...Zr8g==" width="254" height="153" alt=""/></td>
-       <td style="font-size: 50px; color: #FF0004; text-align: center;"><a href="websida.html">Start</a></td>
-       <td style="font-size: 50px; color: #FF0004; text-align: center;"><a href="websidanyheter.html">Nyheter</a></td>
-       <td style="font-size: 50px; color: #FF0004; text-align: center;"><a href="websidakontakt.html">Kontakta oss</a></td>
-	   <td style="font-size: 50px; color: #FF0004; text-align: center;"><img src="nedladdning1.png" width="170" height="130" alt=""/><div id="result"></div>
-</td>
-       <td><span style="color: #FFFFFF">awdawdawdawd</span><img src="1j+ojVNGOMkX9W2+J1iwiG2pif+CqR5GnQiIiWcqL2VE9ApklyUph...Zr8g==" width="254" height="153" alt=""/></td>
-     </tr>
-   </tbody>
- </table>
+}
 
-<h4 style="font-size: 36px; color: #FF0004;">Bästa kyckling i stada</h4>
+h1, h3{
+	color: #000000;
+}
 
-<img src="nedladdning.jpg" width="1100" height="732" class="center" />
-<p style="text-align: center">
-  <button onclick="clickCounter()" type="button">Add to cart</button>
-</p>
+h1 {
+  width: 100%;
+  font-weight: 300;
+  text-align: center;
+	font-size: 40px;
 
+}
 
-<p style="text-align: center">© The Mamma Höna Company™, All Rights Reserved</p>
+h2 {
+  display: inline-block;
+  text-align: center;
+  padding: 3px 10px;
+  margin: 5px;
+  font-size: 1.75rem;
+  COLOR: rgb(0, 0, 0);
+}
 
-</body>
+.menu {
+  border: 2px solid;
+  text-align: center;
+  width: 200px;
+}
+
+h3 {
+  display: inline-block;
+  font-weight: 800;
+  text-align: left;
+  align-items: left;
+  padding: 10px 25px;
+}
+
+.container {
+  min-width: 775px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero {
+
+  background-size: cover;
+  min-width: 964px;
+  min-height: 422px;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  text-align: left;
+  
+  background-color: #BFE4F4;
+  
+}
+
+.supporting-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 0 0 0;
+}
+
+.supporting-container div {
+  background-size: cover;
+  min-width: 450px;
+  min-height: 345px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.upcoming {
+	background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/events.jpg');
+}
+
+.roast {
+	background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/roast.jpg');
+}
+
+#footer {
+  text-align: center;
+  color: #D6B47E;
+  font-weight: 300;
+  width: 100%;
+  font-size: 1.25rem;
+} </style>
+  <body>
+    <div class="container">
+      <img src="nedladdninga.png" alt="logga" height="75px" align-items="left">
+    <h1>Välkommen Till Nynäshamns Segelsällskap</h1>
+      <div class="hero">
+          <div class="hero-content">
+            <div>
+              <h2>välkommen Till Nynäshamns Segelsällskap</h2>
+            </div>
+            <div>
+              <img src="batomoss.jpg" alt="introduktiongrejs">
+            </div>
+            <div>
+            <h3>NSS är en aktiv och betydelsefull aktör i Nynäshamn<br>
+              med en naturlig och mångårig verksamhet med inriktning på <br>
+              sjöliv, båtsport, segling och ungdoms- verksamhet.<br>
+              NSS äger en förnämlig klubbanläggning, varv och bryggor vid Fagerviken,<br>
+              många bryggor i Trehörningsviken samt klubbholmen Lacka strax norr om Nynäshamn.</h3>
+            </div>
+            <div>
+              
+            </div>
+          </div>
+      </div>
+
+      <div class="supporting-container">
+        <div class="upcoming">
+          <h3>Upcoming events</h3>
+        </div>
+        <div class="roast">
+          <h3>Today's Roast</h3>
+        </div>
+      </div>
+      <p id="footer">Contact Us</p>
+    </div>
+
+  </body>
 </html>
