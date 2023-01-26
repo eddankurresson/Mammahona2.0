@@ -1,115 +1,317 @@
-<html>
-<head>
-    <title>Mamma Höna</title>
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
-    <style>
-		  body {
-
-
-    font-size: 36px;
-
+<header class="site-header">
+  <img src="nedladdninga.png" >
+  <div class="site-branding">
+    <h1>
+      <a href="index.html">  Nynäshamns Segelsällskap</a>
+    </h1>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      <li class="selected">
+        <a href="index.html#work" class="selected">Work</a>
+      </li>
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<style>
+  /* #TYPOGRAPHY  */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,.7);;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1em;
+  font-size: 87.5%;
+  line-height: 1.5em;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: 25px solid red;
-  background-color: white;
-  width: 50%;
+h1 {
+  font-size: 3em;
 }
 
-.centera {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: 5px solid yellow;
-  background-color: white;
-  width: 50%;
+/* #LINKS */
+a {
+  color: rgba(0,0,0,.4);;
+  text-decoration: none;
 }
 
-    a:link {
-    color: #FF0004;
-}
-a:visited {
-    color: #FF0004;
-}
 a:hover {
-    color: #FF3E41;
+  color: rgba(0,0,0,.6);;
 }
-a:active {
-    color: #FF0004;
+
+/* HELPERS */
+.text-centered {
+  text-align: center;
 }
-    </style>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-<body bgcolor="#0024FF">
 
-  <h1 style="color: #FF0004">Mamma Hönas Kyckling</h1>
- <table width="100%" border="4" bordercolor=#F8FF00>
-   <tbody bgcolor="#FFFFFF">
-     <tr>
-       <td><span style="color: #FFFFFF">awdawdawdawd</span><img src="1j+ojVNGOMkX9W2+J1iwiG2pif+CqR5GnQiIiWcqL2VE9ApklyUph...Zr8g==" width="254" height="153" alt=""/></td>
-       <td style="font-size: 50px; color: #FF0004; text-align: center;"><a href="index.html">Start</a></td>
-       <td style="font-size: 50px; color: #FF0004; text-align: center;"><a href="websidanyheter.html">Nyheter</a></td>
-       <td style="font-size: 50px; color: #FF0004; text-align: center;"><a href="websidakontakt.html">Kontakta oss</a></td>
-	   <td style="font-size: 50px; color: #FF0004; text-align: center;"><a href="websidashop.html">Shop</a></td>
-       <td><span style="color: #FFFFFF">awdawdawdawd</span><img src="1j+ojVNGOMkX9W2+J1iwiG2pif+CqR5GnQiIiWcqL2VE9ApklyUph...Zr8g==" width="254" height="153" alt=""/></td>
-     </tr>
-   </tbody>
- </table>
+.text-centered p,
+.mywufooform{
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-<h4 style="font-size: 36px; color: #FF0004;">Bästa kyckling i stada</h4>
-        <p style="font-size: 24px; color: #FF0004;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus in mollis nunc sed id semper. Facilisis gravida neque convallis a cras semper auctor neque. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Tincidunt praesent semper feugiat nibh sed pulvinar. Egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices. Diam in arcu cursus euismod quis viverra nibh cras pulvinar. Sodales ut etiam sit amet nisl purus. Felis bibendum ut tristique et egestas quis ipsum. Convallis tellus id interdum velit laoreet id. Turpis nunc eget lorem dolor sed. Amet luctus venenatis lectus magna fringilla urna porttitor.</p>
-        <table width="100%" border="1" bordercolor="#F8FF00">
-          <tbody bgcolor="white">
-            <tr>
-              <td style="font-size: 36px; color: #FF0004;">Anställda</td>
-              <td style="font-size: 36px; color: #FF0004;">Yrkestitel</td>
-              <td style="font-size: 36px; color: #FF0004;">Email</td>
-              <td style="font-size: 36px; color: #FF0004;">Telefon</td>
+.subheader {
+  color: rgba(0,0,0,.5);
+  font-weight: normal;
+}
 
-            </tr>
-            <tr>
-              <td style="font-size: 36px; color: #FF0004;">Edvin</td>
-              <td style="font-size: 36px; color: #FF0004;">Chef</td>
-              <td style="font-size: 36px; color: #FF0004;">edvin@hönachef.com</td>
-              <td style="font-size: 36px; color: #FF0004;">070123456789</td>
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
 
-            </tr>
-            <tr>
-              <td style="font-size: 36px; color: #FF0004;">Karin</td>
-              <td style="font-size: 36px; color: #FF0004;">Utvecklingsansvarig</td>
-              <td style="font-size: 36px; color: #FF0004;">karin@hönautveckling.com</td>
-              <td style="font-size: 36px; color: #FF0004;">070987654321</td>
+.full-width img {
+  width: 100%;
+}
 
-            </tr>
-            <tr>
-              <td style="font-size: 36px; color: #FF0004;">Jonas</td>
-              <td style="font-size: 36px; color: #FF0004;">Produktionsansvarig</td>
-              <td style="font-size: 36px; color: #FF0004;">jonas@hönaproduktion.com</td>
-              <td style="font-size: 36px; color: #FF0004;">0703216549878</td>
+/* #IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-            </tr>
-			   <tr>
-              <td style="font-size: 36px; color: #FF0004;">Anna</td>
-              <td style="font-size: 36px; color: #FF0004;">Kommunikationsansvarig</td>
-              <td style="font-size: 36px; color: #FF0004;">anna@hönakommunikation.com</td>
-              <td style="font-size: 36px; color: #FF0004;">0703216549878</td>
+img.circular {
+  border-radius: 100%;
+}
 
-            </tr>
-          </tbody>
-        </table>
-        <p style="font-size: 24px; color: #FF0004;">&nbsp;</p>
-        <br>
+/* BUTTONS */
+a.button {
+  display: inline-block;
+  background-color: rgba(0,0,0,.3);
+  color: rgba(113, 195, 243, 0.8);
+  border-radius: .5em;
+  padding: 1em 2em .8em 2em;
+  margin: .5em;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: .9em;
+}
+a.button:hover {
+  background-color: rgba(0,0,0,.5);
+}
+
+/* SITE-STRUCTURE */
+
+.site-header,
+.site-footer {
+  text-align: center;
+  padding: 3em 0 2em 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.site-branding h1 {
+  font-size: 2em;
+  margin: 0;
+  font-weight: normal;
+}
+
+.site-navigation ul {
+  margin: 0;
+  padding: 2em 0;
+}
+
+.site-navigation li {
+  margin: 0 .5em;
+  padding: 0;
+  display: inline-block;
+}
+
+.site-navigation a {
+  display: block;
+  padding: 1em .5em;
+  color: rgba(0,0,0,.4);
+}
+
+.site-navigation a:hover,
+.site-navigation a.selected {
+  color: rgba(0,0,0,.6);
+  border-bottom: 0.05em solid rgba(0,0,0,.2);
+}
+
+section {
+  padding: 0 0 3em 0;
+}
+
+.hero {
+  padding: 4em 0;
+  background: #BFE4F4;
+  margin-bottom: 6em;
+}
 
 
-  <p class="centera" />
+/* FLEX GRID */
 
-  <span style="color: #FF0004"> Observera att vi endast har öppet mån-fre 08-16
-  </p>
-  </span><br>
-            <p style="text-align: center">© The Mamma Höna Company™, All Rights Reserved</p>
+@media (min-width: 768px) {
 
-</body>
-</html>
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+  .one-third.column {
+    width: 32%;
+  }
+  .two-thirds.column {
+    width: 60%;
+  }
+
+}
+
+/* #THUMBGRID */
+.thumbgrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.thumbgrid a {
+  width: 49.5%;
+}
+
+@media (min-width:768px) {
+  .thumbgrid a {
+    width: 24.5%;
+  }
+}
+
+.thumbgrid a img {
+  filter: brightness(1.05);
+  transition: all ease-in-out 0.2s;
+  border: 1px solid rgba(255,255,255,0);
+}
+
+.thumbgrid a:hover img {
+  filter: brightness(1);
+  border: 1px solid rgba(0,0,0,.3);
+}
+
+/* Page Fade-ins */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main,
+fade-in {
+  opacity: 0;
+  animation: fade-in ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade-and-move-in {
+  from {
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.fade-and-move-in * {
+  opacity: 0;
+  animation: fade-and-move-in ease-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.fade-and-move-in *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.fade-and-move-in *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.fade-and-move-in *:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.fade-and-move-in *:nth-child(4) {
+  animation-delay: 0.7s;
+}
+.fade-and-move-in *:nth-child(5) {
+  animation-delay: 1s;
+}
+.fade-and-move-in *:nth-child(6) {
+  animation-delay: 1.2s;
+}
+.fade-and-move-in *:nth-child(7) {
+  animation-delay: 1.4s;
+}
+.fade-and-move-in *:nth-child(8) {
+  animation-delay: 1.6s;
+}
+.fade-and-move-in *:nth-child(9) {
+  animation-delay: 1.8s;
+}
+</style>
+<main class="site-main fade-and-move-in">
+
+  <section id="work" class="text-centered">
+
+    <div class="thumbgrid">
+      <a href="web-site.html">
+        <img src="https://res.cloudinary.com/gargiulo/image/upload/v1611877986/placeholder-1x1-hero_v1fq3u.jpg" alt="placeholder" />
+      </a>
+      <a href="logo.html">
+        <img src="https://res.cloudinary.com/gargiulo/image/upload/v1611877986/placeholder-1x1-logo1_bmje5c.jpg" alt="placeholder" />
+      </a>
+      <a href="packaging-set.html">
+        <img src="https://res.cloudinary.com/gargiulo/image/upload/v1611877987/placeholder-1x1-packaging-set_w6dsx5.jpg" alt="placeholder" />
+      </a>
+      <a href="stationary-set.html">
+        <img src="https://res.cloudinary.com/gargiulo/image/upload/v1611877988/placeholder-1x1-stationaryset1_crp5yg.jpg" alt="placeholder" />
+      </a>
+      <a href="book-cover.html">
+        <img src="https://res.cloudinary.com/gargiulo/image/upload/v1611877985/placeholder-1x1-book2_jnmnok.jpg" alt="placeholder" />
+      </a>
+      <a href="art-work.html">
+        <img src="https://res.cloudinary.com/gargiulo/image/upload/v1611877985/placeholder-1x1-art1_eao7ij.jpg" alt="placeholder" />
+      </a>
+      <a href="web-app.html">
+        <img src="https://res.cloudinary.com/gargiulo/image/upload/v1611877986/placeholder-1x1-iphone_brwzb0.jpg" alt="placeholder" />
+      </a>
+      <a href="promo.html">
+        <img src="https://res.cloudinary.com/gargiulo/image/upload/v1611877988/placeholder-1x1-video_in0dfp.jpg" alt="placeholder" />
+      </a>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer fade-and-move-in">
+  <nav class="site-navigation">
+    <ul>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="index.html#work">Work</a>
+      </li>
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+</footer>
