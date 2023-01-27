@@ -1,58 +1,543 @@
+<!DOCTYPE html>
 <html>
+  <meta http-equiv="content-type" content = "text/html" charset = "ISO-8859-1"/>
 <head>
-    <title>NSS</title>
-   
-    <style>
-		  body {
-
-
-    font-size: 36px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+<style>
+* {
+  box-sizing: border-box;
 }
 
-.parent {
-display: grid;
-grid-template-columns: repeat(7, 1fr);
-grid-template-rows: repeat(9, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.div1 { grid-area: 1 / 1 / 1 / 8; background-color: #ffffff; }
+/* Style the header */
+.header {
+  border-style: transparent;
+  grid-area: header;
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'contentOut contentOut contentOut contentOut contentOut contentOut' 
+    'left middle middle middle right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+}
 
-.div2 { grid-area: 2/ 2 / 3 / 7; background-color: #BFE4F4;}
-.div3 { grid-area: 4 / 2 / 7 / 3; background-color: #BFE4F4; }
-.div4 { grid-area: 4 / 4 / 7 / 5; background-color: #BFE4F4;}
-.div5 { grid-area: 4 / 6 / 6 / 7;background-color: #BFE4F4; }
-.div6 { grid-area: 6 / 6 / 7 / 7; background-color: #BFE4F4;}
-.div7 { grid-area: 9 / 1 / 11 / 8; background-color: #BFE4F4;}
-.div8 { grid-area: 1 / 1 / 3 / 2; }
-.div9 { grid-area: 1 / 2 / 2 / 3; }
-.div10 { grid-area: 1 / 3 / 2 / 4; }
-.div11 { grid-area: 1 / 4 / 2 / 5; }
-.div12 { grid-area: 1 / 6 / 2 / 7; }
-.div13 { grid-area: 1 / 7 / 2 / 8; }
-.div14 { grid-area: 9 / 5/ 11 / 8; }
-    </style>  
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+/* The grid container */
+.grid-container {
+  border-style: transparent;
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'contentOut contentOut contentOut contentOut contentOut contentOut' 
+    'left middle right right right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+  grid-row-gap: 10px;
+} 
+
+.left,
+.middle,
+.right {
+padding: 10px;
+  border-style: transparent   ;
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+  border-style: transparent;
+  grid-area: footer;
+  background-color: #BFE4F4;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+  grid-row-gap: 10px;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 100%) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+  .column {
+    width: 100%;}
+}
+
+a:link {
+    color: #060101;
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none;
+}
+a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+a:hover {
+    color: #BFE4F4;
+    text-decoration: none;
+}
+a:active {
+    color: #BFE4F4;
+    text-decoration: none;
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    background-color: #49c8ff;
+    border-radius: 50px;
+ 
+
+}
+
+h1{
+    align-items: left;
+    font-size: 32px;
+    font-style: normal;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+h2{
+    align-items: left;
+    font-size: 16px;
+    font-style: normal;
+    text-align: left;
+    padding-left: 30px;
+    
+}
+
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Offside);
+body {
+  background: #ffffff;
+  font-family: "Offside", Helvetica;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+.container {
+  max-width: 400px;
+  overflow: hidden;
+  -moz-box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
+  -webkit-box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
+  box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
+  margin: 20px auto;
+  background: #eee;
+}
+.container .block {
+  width: 50%;
+  height: 200px;
+  float: left;
+}
+.container .block .small {
+  width: 50%;
+  float: left;
+  height: 100px;
+  display: table;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+}
+.container .block .small:nth-child(1) {
+  background: #ffffff;
+}
+.container .block .small:nth-child(2) {
+  background: #0064ac;
+}
+.container .block .small:nth-child(3) {
+  background: #0064ac;
+}
+.container .block .small:nth-child(4) {
+  background: #ffffff;
+}
+.container .text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #BFE4F4;
+  position: relative;
+  z-index: 2;
+}
+.container .item {
+  width: 200px;
+  height: 200px;
+  float: left;
+  display: table;
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+}
+.container .item:after {
+  background: #315A78;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.container .item:first-child {
+  width: 100%;
+  height: 50px;
+  background: #0064ac;
+}
+.container .item:nth-child(2) {
+  background-image: url("http://cdn4.pitchfork.com/news/49571/021544fb.jpg");
+}
+.container .item:nth-child(5) {
+  background-image: url("https://4.bp.blogspot.com/_9dPtEKC0NW4/Ss7y_zFM4EI/AAAAAAAABaw/CASHQhIKKn8/s400/nirvana_nevermind_album_cover.jpg");
+}
+.container .item:nth-child(6) {
+  background-image: url("http://upload.wikimedia.org/wikipedia/en/b/b5/James_Blake_Cover.jpg");
+}
+.container .item:nth-child(9) {
+  background-image: url("http://aspiringiconicmiscreation.files.wordpress.com/2013/04/peace-album-cover.jpg");
+}
+
+
+</style>
+<head> 
+    <div class="grid-container">
+        <div class="header">
+            <div class ="left">
+                <a href="index.html2"> <img src="logga.png" style="max-width: 20%;">  </a>
+            </div>
+            <div class="middle">
+            
+            
+                <a href="index.html2">Om Oss </a>
+                <a href="index.html2">T&auml;vlingar</a>
+                <a href="index.html2">Kanot</a>
+                <a href="index.html2">Ungdomsverksamhet</a> 
+            </div>
+            
+            <div class="right">
+            <a href="index.html2">Kl&auml;der</a>
+            <a href="index.html2">Kontakt</a>
+            <a href="nyheter.html" class="button" >&nbsp;Nyheter&nbsp;</a>
+            </div>
+        </div>
 </head>
+<body>
 
-<body bgcolor="#FFFFFF">
-  <div class="parent">
-    <div class="div1"> </div>
-    <div class="div2"> kompis</div>
-    <div class="div3"> vad händer</div>
-    <div class="div4"> kuken vänder</div>
-    <div class="div5"> lixom </div>
-    <div class="div6"> lite granna</div>
-    <div class="div7"> </div>
-    <div class="div8">  <img src="nedladdninga.png" ></div>
-    <div class="div9"> iallafall just nu</div>
-    <div class="div10"> visst äre</div>
-    <div class="div11"> mycket knasigt</div>
-    <div class="div12"> min käre</div>
-    <div class="div13"> vän yo</div>
-    <div class="div14"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.4562557675717!2d17.941270816054566!3d58.89023678150737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f5ea05a12739b%3A0x95f7354abfef82c7!2sNyn%C3%A4shamns%20Segels%C3%A4llskap!5e0!3m2!1ssv!2sse!4v1674645100008!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+
+    <div class="grid-container">
+        <div class="header">
+            <div class ="left" style="background-color: #BFE4F4;">
+                <H1>V&auml;lkommen Till <br> Nyn&auml;shamns Segels&auml;llskap <br></H1>
+                <h2>
+                  NSS &auml;r en aktiv och betydelsefull akt&ouml;r i  <br> Nyn&auml;shamn med en naturlig och m&aring;ng&aring;rig  <br> 
+                  verksamhet med inriktning p&aring; sj&ouml;liv, b&aring;tsport, <br> segling och ungdoms- verksamhet. <br>
+                  NSS &auml;ger en f&ouml;rn&auml;lig klubbanl&auml;ggning, varv och<br> bryggor vid Fagerviken, m&aring;nga bryggor i <br> 
+                  Treh&ouml;rningsviken samt klubbholmen Lacka strax norr om Nyn&auml;shamn. 
+                        </h2>
+                    
+            </div>
+            <div class ="middle" style="background-color: #BFE4F4;">
+    
+                  
+          </div>
+            <div class="right" style="background-color: #BFE4F4;">
+
+                <h2></h2>  
+            
+                <img src="batomoss.jpg">
+
+                <h2></h2>
+            </div>
+        </div>
+   
+        <div class ="left" style="background-color: #BFE4F4;">
+            <div class='container'>
+                <div class='item'>
+                  <div class='text'>Senaste Nytt</div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>1</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>2</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>3</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>4</div>
+                  </div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>5</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>6</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>7</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>8</div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>9</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>10</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>11</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>12</div>
+                  </div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>13</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>14</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>15</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>16</div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+              </div>
+              
+        </div>
+
+        <div class ="middle" style="background-color: #BFE4F4;">
+            
+            <div class='container'>
+                
+                <div class='item'>
+                  <div class='text'>Senaste Styrelsemötet</div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>17</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>18</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>19</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>20</div>
+                  </div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>21</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>22</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>23</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>24</div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>25</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>26</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>27</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>28</div>
+                  </div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>29</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>30</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>31</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>32</div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+              </div>
+              
+                
+        </div>
+
+        <div class="right" style="background-color: #BFE4F4;">
+            <div class='container'>
+                <div class='item'>
+                  <div class='text'>Annat viktigt och intressant</div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>33</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>34</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>35</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>36</div>
+                  </div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>37</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>38</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>39</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>40</div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>41</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>42</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>43</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>44</div>
+                  </div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>45</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>46</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>47</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>48</div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+              </div>
+              
+        </div>
+   
+        <div class="footer">
+          
+            <div class="left" style="background-color: #BFE4F4;">
+                Öppettider <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                Kontakta Oss
+            </div>
+            <div class ="middle" style="background-color: #BFE4F4;">
+            
+           <h1></h1>
+                
+            </div>
+            <div class="right" style="background-color: #BFE4F4;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.
+                4562557675717!2d17.941270816054566!3d58.89023678150737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
+                4f13.1!3m3!1m2!1s0x465f5ea05a12739b%3A0x95f7354abfef82c7!2sNyn%C3%A4shamns%20Segels%C3%A4llskap!5e0!3m2!1ssv!2sse!4v1674645100008!5m2!1ssv!2sse" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
     </div>
 
 </body>
