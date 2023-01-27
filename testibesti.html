@@ -1,286 +1,687 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-* {
-  box-sizing: border-box;
-}
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head><script type="text/javascript" src="/_static/js/bundle-playback.js?v=21L7o4JU" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=Jjml7g96" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.nynashamnyachtclub.se:80/","20160623113727","https://web.archive.org/","web","/_static/",
+	      "1466681847");
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=S1zqJCYt" />
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
+<!-- End Wayback Rewrite JS Include -->
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-.header {
-  border-style: transparent;
-  grid-area: header;
-  padding: 30px;
-  text-align: center;
-  font-size: 25px;
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'contentOut contentOut contentOut contentOut contentOut contentOut' 
-    'left middle middle middle right right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-}
-
-.contentOut{
-  border-style: transparent;
-  grid-area: contentOut;
-  padding: 60px;
-  text-align: center;
-  font-size: 35px;
-  /*width: 300px;*/
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'contentOut contentOut contentOut contentOut contentOut contentOut' 
-    'left middle right right right right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-}
-.contentIn{
-  border-style: transparent;
-  grid-area: contentOut;
-  background-color: #BFE4F4;
-  padding: 0px;
-  text-align: center;
-  font-size: 35px;
-  /*width: 300px;*/
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'contentOut contentOut contentOut contentOut contentOut contentOut' 
-    'left middle right right right right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-  grid-row-gap: 0px;
-}
-
-
-/* The grid container */
-.grid-container {
-  border-style: transparent;
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'contentOut contentOut contentOut contentOut contentOut contentOut' 
-    'left middle right right right right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-  grid-row-gap: 10px;
-} 
-
-.left,
-.middle,
-.right {
-
-  border-style: solid   ;
-}
-
-/* Style the left column */
-.left {
-  grid-area: left;
-}
-
-/* Style the middle column */
-.middle {
-  grid-area: middle;
-}
-
-/* Style the right column */
-.right {
-  grid-area: right;
-}
-
-/* Style the footer */
-.footer {
-  border-style: transparent;
-  grid-area: footer;
-  background-color: #BFE4F4;
-  padding: 15px;
-  text-align: center;
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'contentOut contentOut contentOut contentOut contentOut contentOut' 
-    'left left middle middle right right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-  grid-row-gap: 10px;
-}
-
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .grid-container  {
-    grid-template-areas: 
-      'header header header header header header' 
-      'left left left left left left' 
-      'middle middle middle middle middle middle' 
-      'right right right right right right' 
-      'footer footer footer footer footer footer';
-  }
-  .column {
-    width: 100%;}
-}
-
-a:link {
-    color: #060101;
-    font-size: 15px;
-    text-align: left;
-    text-decoration: none;
-}
-a:visited {
-    color: #000000;
-    text-decoration: none;
-}
-a:hover {
-    color: #BFE4F4;
-    text-decoration: none;
-}
-a:active {
-    color: #BFE4F4;
-    text-decoration: none;
-}
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    text-decoration: none;
-    background-color: #49c8ff;
-    border-radius: 50px;
- 
-
-}
-
-h1{
-    align-items: left;
-    font-size: 32px;
-    font-style: normal;
-    text-align: left;
-    padding-left: 30px;
-    padding-top: 20px;
-}
-h2{
-    align-items: left;
-    font-size: 16px;
-    font-style: normal;
-    text-align: left;
-    padding-left: 30px;
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://web.archive.org/web/20160623113727cs_/http://fonts.googleapis.com/css?family=Cabin:400,500,400italic,600,700|Sanchez" rel="stylesheet" type="text/css">
+    <title>Nynashamn Yacht Club | Nynäshamns Segelsällskap    </title>
     
-}
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+<meta name="description" content="Nynäshamns Segelsällskap"/>    <link rel="profile" href="http://gmpg.org/xfn/11"/>
+    <link rel="stylesheet" type="text/css" media="all" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-child/style.css"/>
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/feed/"/>
+    <link rel="pingback" href="http://www.nynashamnyachtclub.se/xmlrpc.php"/>
+    <link rel="alternate" type="application/rss+xml" title="Nynashamn Yacht Club » Hem kommentarsflöde" href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/home/feed/"/>
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/web.archive.org\/web\/20160623113727\/https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/web.archive.org\/web\/20160623113727\/http:\/\/www.nynashamnyachtclub.se\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.4"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
 }
 </style>
-<head> 
-    <div class="grid-container">
-        <div class="header">
-            <div class ="left">
-                <a href="index.html2"> <img src="logga.png" style="max-width: 20%;">  </a>
-            </div>
-            <div class="middle">
-            
-            
-                <a href="index.html2">Om Oss </a>
-                <a href="index.html2">Tävlingar</a>
-                <a href="index.html2">Kanot</a>
-                <a href="index.html2">Ungdomsverksamhet</a> 
-            </div>
-            
-            <div class="right">
-            <a href="index.html2">Kläder</a>
-            <a href="index.html2">Kontakt</a>
-            <a href="index.html2" class="button" >&nbsp;Nyheter&nbsp;</a>
-            </div>
-        </div>
+<link rel="stylesheet" id="sfpw-style-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/plugins/simple-featured-posts-widget//sfpw-style.css?ver=4.4.4" type="text/css" media="all"/>
+<link rel="stylesheet" id="ppc-main-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/plugins/posts-per-cat/assets/css/ppc.min.css?ver=4.4.4" type="text/css" media="all"/>
+<style id="ppc-main-inline-css" type="text/css">
+.ppc .attachment-60x60 {
+			width: 60px !important;
+			height: 60px !important;
+		}
+</style>
+<link rel="stylesheet" id="tsp_css_tsp_featured_categories-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/plugins/tsp-featured-categories/tsp-featured-categories.css?ver=4.4.4" type="text/css" media="all"/>
+<link rel="stylesheet" id="tsp_css_movingboxes-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/plugins/tsp-featured-posts/css/movingboxes.css?ver=4.4.4" type="text/css" media="all"/>
+<link rel="stylesheet" id="tsp_css_tsp_featured_posts-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/plugins/tsp-featured-posts/tsp-featured-posts.css?ver=4.4.4" type="text/css" media="all"/>
+<link rel="stylesheet" id="recent-posts-widget-with-thumbnails-public-style-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/plugins/recent-posts-widget-with-thumbnails/public.css?ver=4.10.2" type="text/css" media="all"/>
+<link rel="stylesheet" id="screen_css-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-child/screen.css?ver=4.4.4" type="text/css" media="all"/>
+<link rel="stylesheet" id="default-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/styles/default.css?ver=4.4.4" type="text/css" media="screen"/>
+<link rel="stylesheet" id="cusel-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/css/cusel.css?ver=4.4.4" type="text/css" media="all"/>
+<link rel="stylesheet" id="prettyPhoto-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/framework/static/css/prettyPhoto.css?ver=4.4.4" type="text/css" media="all"/>
+<link rel="stylesheet" id="shCore-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/css/shCore.css?ver=4.4.4" type="text/css" media="all"/>
+<link rel="stylesheet" id="shThemeDefault-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/css/shThemeDefault.css?ver=4.4.4" type="text/css" media="all"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var tribe_events_linked_posts = {"post_types":{"tribe_venue":"venue","tribe_organizer":"organizer"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-includes/js/jquery/jquery.js?ver=1.11.3"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/plugins/tsp-featured-categories/js/jquery.smoothDivScroll-1.1.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/plugins/tsp-featured-categories/js/gallery-scripts.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/plugins/tsp-featured-posts/js/jquery.movingboxes.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/plugins/tsp-featured-posts/js/slider-scripts.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/plugins/tsp-featured-posts/js/scripts.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/plugins/wp-retina-2x/js/picturefill.min.js?ver=3.0.2"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/js/libs/modernizr.min.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/js/libs/respond.min.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/js/jquery.easing.1.3.min.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/js/general.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/js/jquery.carouFredSel.min.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/js/jquery.touchSwipe.min.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/js/cusel-min.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/js/jquery.tools.min.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/js/jquery.customInput.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/framework/static/javascript/jquery.prettyPhoto.js?ver=3.1.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/framework/extensions/newsletter/static/js/newsletter_clientside.js?ver=4.4.4"></script>
+<link rel="https://api.w.org/" href="http://www.nynashamnyachtclub.se/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.nynashamnyachtclub.se/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.nynashamnyachtclub.se/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 4.4.4"/>
+<link rel="canonical" href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/"/>
+<link rel="shortlink" href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/"/>
+<link rel="shortcut icon" href="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/01/favicon.ico"/>
+
+<!-- Dynamic Widgets by QURL - http://www.qurl.nl //-->
+
+<script type="text/javascript">/* <![CDATA[ */
+tf_script={"TF_THEME_PREFIX":"conexus","TFUSE_THEME_URL":"https:\/\/web.archive.org\/web\/20160623113727\/http:\/\/www.nynashamnyachtclub.se\/wp-content\/themes\/conexus-parent","ajaxurl":"https:\/\/web.archive.org\/web\/20160623113727\/http:\/\/www.nynashamnyachtclub.se\/wp-admin\/admin-ajax.php"};
+/* ]]> */</script>
 </head>
-<body>
-
-
-
-    <div class="grid-container">
-        <div class="header">
-            <div class ="left" style="background-color: #BFE4F4;">
-                <H1>Välkommen Till <br> Nynäshamns Segelsällskap <br></H1>
-                <h2>
-                NSS är en aktiv och betydelsefull aktör i  <br> Nynäshamn med en naturlig och mångårig  <br> 
-                verksamhet med inriktning på sjöliv, båtsport, <br> segling och ungdoms- verksamhet. <br>
-                NSS äger en förnämlig klubbanläggning, varv och<br> bryggor vid Fagerviken, många bryggor i <br> 
-                Trehörningsviken samt klubbholmen Lacka strax norr om Nynäshamn. 
-                        </h2>
-                    
-            </div>
-
-            <div class="right" style="background-color: #BFE4F4;">
-
-                <h2></h2>  
-            
-                <img src="batomoss.jpg">
-
-                <h2></h2>
-            </div>
-        </div>
-   
-        <div class ="left" style="background-color: #BFE4F4;"><H1>Välkommen Till <br> Nynäshamns Segelsällskap <br></H1>
-            <h2>
-            NSS är en aktiv och betydelsefull aktör i  <br> Nynäshamn med en naturlig och mångårig  <br> 
-            verksamhet med inriktning på sjöliv, båtsport, <br> segling och ungdoms- verksamhet. <br>
-            NSS äger en förnämlig klubbanläggning, varv och<br> bryggor vid Fagerviken, många bryggor i <br> 
-            Trehörningsviken samt klubbholmen Lacka strax norr om Nynäshamn. 
-            </h2>
-                
-        </div>
-
-        <div class ="middle" style="background-color: #BFE4F4;">
-            <H1>Välkommen Till <br> Nynäshamns Segelsällskap <br></H1>
-            <h2>
-            NSS är en aktiv och betydelsefull aktör i  <br> Nynäshamn med en naturlig och mångårig  <br> 
-            verksamhet med inriktning på sjöliv, båtsport, <br> segling och ungdoms- verksamhet. <br>
-            NSS äger en förnämlig klubbanläggning, varv och<br> bryggor vid Fagerviken, många bryggor i <br> 
-            Trehörningsviken samt klubbholmen Lacka strax norr om Nynäshamn. 
-            </h2>
-                
-        </div>
-
-        <div class="right" style="background-color: #BFE4F4;">
-
-            <h2></h2>  
-
-            <img src="batomoss.jpg">
-
-            <h2></h2>
-        </div>
-    
-        <div class="footer">
-            <div class="left" style="background-color: #BFE4F4;">
-                Öppettider <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-                Kontakta Oss
-            </div>
-        
-            <div class="right" style="background-color: #BFE4F4;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.
-                4562557675717!2d17.941270816054566!3d58.89023678150737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
-                4f13.1!3m3!1m2!1s0x465f5ea05a12739b%3A0x95f7354abfef82c7!2sNyn%C3%A4shamns%20Segels%C3%A4llskap!5e0!3m2!1ssv!2sse!4v1674645100008!5m2!1ssv!2sse" 
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
+<body class="unknown"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display:none;direction:ltr;">
+<div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20160623113727/http%3A//www.nynashamnyachtclub.se/"
+	    scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="/web/" title="Wayback Machine home page"><img src="/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="/_static/images/toolbar/wayback-toolbar-logo-100.png, /_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, /_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0" /></a>
     </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.nynashamnyachtclub.se/" onfocus="this.focus();this.select();" style="flex:1;"/><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20160623113727" /><input type="submit" value="Go" />
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;">
+                    <a class="t" href="/web/20160623113727*/http://www.nynashamnyachtclub.se/" title="See a list of every capture for this URL">44 captures</a>
+          <div class="r" title="Timespan for captures of this URL">22 Apr 2016 - 02 Dec 2022</div>
+          </div>
+        <div class="k">
+          <a href="" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="700" height="27" border="0"></canvas>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20160422173955/http://www.nynashamnyachtclub.se:80/" title="22 Apr 2016"><strong>Apr</strong></a></td>
+            <td class="c" id="displayMonthEl" title="You are here: 11:37:27 Jun 23, 2016">JUN</td>
+            <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20160724055535/http://www.nynashamnyachtclub.se:80/" title="24 Jul 2016"><strong>Jul</strong></a></td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20160523150423/http://www.nynashamnyachtclub.se:80/" title="15:04:23 May 23, 2016"><img src="/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 11:37:27 Jun 23, 2016">23</td>
+            <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20160724055535/http://www.nynashamnyachtclub.se:80/" title="05:55:35 Jul 24, 2016"><img src="/_static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0" /></a></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap">2015</td>
+            <td class="c" id="displayYearEl" title="You are here: 11:37:27 Jun 23, 2016">2016</td>
+            <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20170804033919/http://www.nynashamnyachtclub.se:80/" title="04 Aug 2017"><strong>2017</strong></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="#" title="Share via My Web Archive" >
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web"></span>
+        </span>
+                <a class="xxs" href="http://faq.web.archive.org/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="/web/20160623113727/http://web.archive.org/screenshot/http://www.nynashamnyachtclub.se/"
+           id="wm-screenshot"
+           title="screenshot">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se:80/" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se:80/" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="#expand" onclick="__wm.ex(event);return false;"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+                    <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+            <div style="display:inline-block;vertical-align:top;width:50%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls);"></span>
+		Organization: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="/_static/images/loading.gif" alt="loading" /></div>
+    </div>
+    </div>
+  </div></div></div></div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se:80/</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(700,27,25,2,"web","http://www.nynashamnyachtclub.se/","20160623113727",1996,"/_static/",["/_static/css/banner-styles.css?v=S1zqJCYt","/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+    <div class="body_wrap">
+        <div class="header_top">
+            <div class="container">
+                <div class="logo">
+                    <a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/" title="Nynäshamns Segelsällskap">
+                        <img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/01/NSS_logo_50px1.png" alt="Nynashamn Yacht Club" border="0"/>
+                    </a>
+                </div><!--/ .logo -->
+                <nav id="topmenu" class="menu-menu-container"><ul id="menu-menu" class="dropdown"><li id="menu-item-1040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1040"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nss/"><span>NSS</span></a>
+<ul class="submenu-1"/>
+	<li id="menu-item-1993" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1993"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/kalender/"><span>Kalender</span></a></li>
+	<li id="menu-item-1068" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1068"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/styrelse-ansvariga/"><span>Styrelse &#038; Ansvariga</span></a></li>
+	<li id="menu-item-1085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1085"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nss/"><span>Kort om NSS</span></a></li>
+	<li id="menu-item-2022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2022"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/kommitteer/"><span>Kommittéer</span></a>
+	<ul class="submenu-1"/>
+		<li id="menu-item-2363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2363"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/hamn/"><span>Hamnkommittén</span></a></li>
+		<li id="menu-item-2364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2364"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/kanot/"><span>Kanotkommittén</span></a></li>
+		<li id="menu-item-2365" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2365"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/klubbkommitten/"><span>Klubbkommittén</span></a></li>
+		<li id="menu-item-2366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2366"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/lackakommitten/"><span>Lackakommitten</span></a></li>
+		<li id="menu-item-2360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2360"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/tavlingskommitten/"><span>Tävlingskommittén</span></a></li>
+		<li id="menu-item-2361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2361"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/utbildning/"><span>Utbildningskommittén</span></a></li>
+		<li id="menu-item-2362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2362"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/varv/"><span>Varvskommittén</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-2992" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2992"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nss/nss-historia/"><span>NSS Historia</span></a></li>
+	<li id="menu-item-1937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1937"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/kontakt/"><span>Kontakt</span></a></li>
+</ul>
+</li>
+<li id="menu-item-1941" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1941"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/blog/"><span>Nyheter</span></a></li>
+<li id="menu-item-1044" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1044"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/medlemmar/"><span>Medlem</span></a>
+<ul class="submenu-1"/>
+	<li id="menu-item-1970" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1970"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/ansokanmedlemskap/"><span>Ansökan / Ändringsanmälan</span></a></li>
+	<li id="menu-item-1980" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1980"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/full-width/avgifter-och-priser/"><span>Avgifter och priser</span></a></li>
+	<li id="menu-item-2030" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2030"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/forum/"><span>Forum</span></a></li>
+	<li id="menu-item-2427" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2427"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/medlemserbjudanden/"><span>Medlemserbjudanden</span></a></li>
+	<li id="menu-item-1989" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1989"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nssaren-klubbtidning/"><span>NSS:aren &#8211; Klubbtidning</span></a></li>
+	<li id="menu-item-1985" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1985"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/medlemsmatrikel/"><span>Medlemsmatrikel</span></a></li>
+	<li id="menu-item-2465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2465"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/sjo-och-torrsattning/"><span>Sjö- och torrsättning</span></a></li>
+	<li id="menu-item-2464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2464"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/vaktlista-2016/"><span>Vaktlista</span></a></li>
+	<li id="menu-item-1976" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1976"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/arsmotesprotokoll/"><span>Årsmötesprotokoll</span></a></li>
+	<li id="menu-item-2562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2562"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/kallelser-till-medlemmar/"><span>Kallelser till medlemmar</span></a></li>
+</ul>
+</li>
+<li id="menu-item-1048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1048"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/tavlingar/"><span>Tävlingar</span></a>
+<ul class="submenu-1"/>
+	<li id="menu-item-2243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2243"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/2016-minirival/"><span>miniRival</span></a></li>
+	<li id="menu-item-2200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2200"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/windsurfing/"><span>Windsurfing</span></a></li>
+	<li id="menu-item-2221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2221"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/2016-sm-606/"><span>SM 606</span></a></li>
+	<li id="menu-item-2196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2196"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/2016-nynas-offshore-race/"><span>Nynäs Offshore Race</span></a></li>
+	<li id="menu-item-2191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/2016-hyundai-cup/"><span>Hyundai Cup</span></a></li>
+	<li id="menu-item-2860" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2860"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/2016-lilla-hyundai-cup/"><span>Lilla Hyundai Cup</span></a></li>
+	<li id="menu-item-2149" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-2149"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/category/2015-arkiv/"><span>2015 &#8211; Arkiv</span></a>
+	<ul class="submenu-1"/>
+		<li id="menu-item-1798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1798"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/5-5-metre-world-championship/"><span>5.5 Metre World Championship</span></a></li>
+		<li id="menu-item-1782" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1782"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nynas-offshore-race/"><span>Nynäs Offshore Race</span></a></li>
+		<li id="menu-item-1710" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1710"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/veteranbatsfestivalen-i-nynashamn/"><span>Veteranbåtsfestivalen i Nynäshamn &#8211; 2015</span></a></li>
+		<li id="menu-item-1615" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1615"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/sm-m30-och-m22/"><span>SM M30 och M22</span></a></li>
+		<li id="menu-item-1237" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1237"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/neptunkryssarpokalen/"><span>Neptunkryssar-<br/>pokalen</span></a></li>
+		<li id="menu-item-1244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1244"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/sm-rival-22/"><span>SM Rival 22</span></a></li>
+		<li id="menu-item-1128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1128"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/skargardskryssarpokalen-sm-a22/"><span>Skärgårdskryssar-<br/>pokalen &#8211; SM A22</span></a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-2006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2006"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/hamn-varv/"><span>Hamn &#038; Varv</span></a>
+<ul class="submenu-1"/>
+	<li id="menu-item-2381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2381"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/gasthamnen/"><span>Gästhamn</span></a></li>
+	<li id="menu-item-2997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2997"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/lacka-klubbholme/"><span>Lacka &#8211; klubbholme</span></a></li>
+	<li id="menu-item-1961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1961"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/sjo-och-torrsattning/"><span>Sjö- och torrsättning</span></a></li>
+	<li id="menu-item-2516" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2516"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nss-sjosattningsramp/"><span>Sjösättningsramp</span></a></li>
+	<li id="menu-item-1997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1997"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nss-varvsordning/"><span>NSS Varvsordning</span></a></li>
+	<li id="menu-item-2001" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2001"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nss-hamnordning/"><span>NSS Hamnordning</span></a></li>
+	<li id="menu-item-2460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2460"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/vaktlista-2016/"><span>Vaktlista</span></a></li>
+</ul>
+</li>
+<li id="menu-item-2985" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2985"><a href="#"><span>Kanot &#038; Jolle</span></a>
+<ul class="submenu-1"/>
+	<li id="menu-item-2025" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2025"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/kanot/"><span>Kanot</span></a></li>
+	<li id="menu-item-1052" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1052"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/lager-och-utbildning/"><span>Läger och utbildning</span></a></li>
+</ul>
+</li>
+</ul></nav>
+                <div class="topsearch">
+                    <form id="searchForm" action="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/" method="get">
+                        <input type="text" name="s" id="s" value="" class="stext">
+                        <input type="submit" id="searchSubmit" value="Search" class="btn-search">
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div><!--/ container -->
+        </div><!--/ header_top -->
+<div class="header" style="background-image:url(https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/slider_bg_ver02.jpg);">
+    <div class="header_inner">
+        <div class="container">
+            <!-- header slider -->
+            <div class="header_slider">
+                                   <div class="oneByOne_item">
+                        <div class="slider_title" data-animate="flipInY">
+                            <a href=""><strong>Kvällskappseglingar onsdagar</strong></a>
+                            <p class="slider_subtitle">NSS anordnar kvällskappseglingar på onsdagskvällar med klubbens båtar.<br> Vi har en facebookgrupp https://www.facebook.com/groups/611767745642525/ "NSS Kvällskappsegling" och om man inte har FB så kan man kontakta jacob@jannering.se för mer information</p>
+                        </div>
+                        <img width="940" src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/slider_logo_NSS.png" class="slider_image" data-animate="fadeInLeft" alt="">
+                                                    <a href="https://web.archive.org/web/20160623113727/https://www.facebook.com/groups/611767745642525/" class="slider_btn" data-animate="fadeInDown"><span>Facebooksida</span></a>
+                                            </div>
+                                    <div class="oneByOne_item">
+                        <div class="slider_title" data-animate="flipInY">
+                            <a href="#"><strong>Jubileumsboken NSS 100 ÅR <br> Nytt ännu lägre pris!</strong></a>
+                            <p class="slider_subtitle">En bok med unika bilder och spännande berättelser. <br>Häftig, hundraårig historik om båtar, båtliv och skärgård.<br>Beställ och hämta boken på NSS kansli, till priset av endast 200 kr (tidigare 380 kr).</p>
+                        </div>
+                        <img width="940" src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/slider_100ars-bok.png" class="slider_image" data-animate="fadeInLeft" alt="">
+                                                    <a href="jubileumsboken-nss-100-ar" class="slider_btn" data-animate="fadeInDown"><span>Beställ boken</span></a>
+                                            </div>
+                                    <div class="oneByOne_item">
+                        <div class="slider_title" data-animate="flipInY">
+                            <a href=""><strong>Bilder från NSS-dagen</strong></a>
+                            <p class="slider_subtitle">Se bildgalleri från lördagen den 23 april.</p>
+                        </div>
+                        <img width="940" src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/slider_logo_NSS.png" class="slider_image" data-animate="fadeInLeft" alt="">
+                                                    <a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nss-dagen-2016" class="slider_btn" data-animate="fadeInDown"><span>Titta på bilder</span></a>
+                                            </div>
+                            </div><!--/ header slider -->
 
+        </div><!--/ container -->
+    </div><!--/ header_inner -->
+</div><!--/ header -->
+<script>
+    jQuery(document).ready(function() {
+        jQuery('.header_slider').oneByOne({
+            className: 'oneByOne1',
+            slideShow: true,
+            width: 960,
+            height: 476,
+            slideShowDelay: 5000,
+            showButton: false,
+            autoHideButton: false,
+            enableDrag: false,
+            tolerance: 0
+        });
+    });
+</script><div id="middle" class="full_width">
+    <div class="container clearfix">
+        <!-- .content -->
+        <div class="content" role="main">
+                                        <article class="post-detail">
+                    <div class="entry clearfix">
+                        <div class="col col_1_2 box box_border box_white">
+<div class="inner">
+<h2 class="tfuse">Midsommarfirande på Lacka</h2>
+<p>I år blir det inget arrangerat midsommarfirande av Lacka kommittén. Men alla är hjärtligt välkomna att fira midsommar på vår underbara klubbholme Lacka ändå!</p>
+<p>// Lacka Kommittén</p>
+<div class="col col_1_2 box box_border box_white">
+<div class="inner"></div>
+</div>
+<h2 class="tfuse">Funktionär ÅF Offshore Race 2016</h2>
+<p>Vi har fått en fråga från KSSS om någon från vår klubb vill vara funktionär under ÅF Offshore Race 2016. Tävlingen startar utanför Kastellholmen i Stockholm 3 juli och går runt Gotland med mål i Sandhamn 5 juli. Hör av dig till Lennart Jonsson 070-580 83 04 om du vill ha mer information.</p>
+<p>// Tävlingskommittén</p>
+</div>
+</div>
+<div class="col col_1_2 box box_border box_white">
+<div class="inner">
+<h2 class="tfuse">Vakt- och Brygglista för 2016</h2>
+<p>Nu finns årets vakt- och brygglistor publicerade för bryggvakt med start den 2 maj, 2016. Se menyn under ”Medlemsinfo &gt; <a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/vaktlista-2016/">Vaktlista</a>”</p>
+<h2 class="tfuse">Ingen bilparkering på Filips Holme 1/6 &#8211; 15/9</h2>
+<p>Filips Holmes Båtklubb i samverkan med kommunen kommer att spärra av Filips Holme i syfte att förhindra parkering av fordon där under sommaren. Avspärrningen kommer att finnas 1 juni – 15 september.</p>
+<p>Läs mer ”Nyheter &gt; <a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/filips-holme-avsparras-for-parkering/">Filips Holme avspärras</a>”</p>
+</div>
+</div>
+<div class="divider_thin"></div>
+<div class="col col_1_2 ">
+<div class="inner">
+<h2 class="tfuse">Nynäshamns Segelsällskap &#8211; NSS</h2>
+<p>Vi är en aktiv och betydelsefull aktör i Nynäshamn. En naturlig och mångårig verksamhet med inriktning på sjöliv, båtsport, segling och ungdoms- verksamhet i många former. De flesta familjer i sjöstaden Nynäshamn har tillgång till båt i någon form och NSS har idag över 1200 medlemmar. NSS äger en förnämlig klubbanläggning, varv och bryggor vid Fagerviken, många bryggor i Trehörningsviken samt klubbholmen Lacka strax norr om Nynäshamn.</p>
+<p><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nss/" class="button_link btn_blue" target="_self"><span>Mer om oss</span></a>&nbsp;&nbsp; <a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/kontakt/" class="button_link btn_blue" target="_self"><span>Kontakta oss</span></a>&nbsp;&nbsp;
+</div>
+</div>
+<div class="col col_1_2 ">
+<div class="inner">
+<div class="slider slider_small">
+<div class="slider_container clearfix" id="slider160">
+<div class="slider-item">
+<div class="inner"><iframe src="https://web.archive.org/web/20160623113727if_/https://www.youtube.com/embed/eAD0kBwvvOQ" width="430" height="242" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+</div>
+<div class="slider-item">
+<div class="inner"><iframe src="https://web.archive.org/web/20160623113727if_/https://www.youtube.com/embed/rfFEVQNKD0s" width="430" height="242" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+</div>
+<div class="slider-item">
+<div class="inner"><iframe src="https://web.archive.org/web/20160623113727if_/https://player.vimeo.com/video/42272633" width="430" height="242" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+</div>
+</div>
+<div class="slider_pagination" id="slider160_pag"></div>
+</p></div>
+<p>        <script>
+            jQuery(document).ready(function($) {
+                function start_slider(){
+                    $("#slider160").carouFredSel({
+                        pagination : "#slider160_pag",
+                        infinite: false,
+                        auto: false,
+                        height: "auto",
+                        items: 1,
+                        scroll: {
+                            fx: "fade",
+                            duration: 200
+                        }
+                    });
+                }
+                start_slider();
+                jQuery(window).resize(function(){
+                    start_slider();
+                });
+            });
+        </script>
+</div>
+</div>
+                    </div><!--/ .entry -->
+                </article>
+                                </div><!--/ .content -->
+
+                <div class="clear"></div>
+    </div><!--/ .container -->
+</div><!--/ .middle -->
+
+<div class="middle_row odd">
+    <div class="container clearfix">
+        <!-- posts carousel -->
+        <div class="carousel_posts clearfix">
+            <div class="carousel_head">
+                <a class="prev" id="postcarousel22_prev" href="#"><span>prev</span></a>
+                <h3>Senaste nytt från Kommittéerna</h3>
+                <a class="next" id="postcarousel22_next" href="#"><span>next</span></a>
+            </div>
+
+            <div class="carousel_content">
+                <ul id="postcarousel22">
+                                            <li>
+                            <div class="post-image"><a href="klubbkommitte"><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/thumbKlubbKommitten.jpg" alt=""></a></div>
+                            <div class="post-title"><a href="klubbkommitte">Klubbkommittén</a></div>
+                            <div class="post-descr">Läs om våra sociala arrangemang och träffar från klubbkommittens verksamhet</div>
+                            <div class="post-more"><a href="klubbkommitte">LÄS MER</a></div>
+                        </li>
+                                            <li>
+                            <div class="post-image"><a href="lackakommitten"><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/thumbLackaKommitte1.jpg" alt=""></a></div>
+                            <div class="post-title"><a href="lackakommitten">Lackakommittén</a></div>
+                            <div class="post-descr">Läs de senaste uppdateringarna från kommittén och vad som är på gång på vår klubbholme, Lacka.</div>
+                            <div class="post-more"><a href="lackakommitten">LÄS MER</a></div>
+                        </li>
+                                            <li>
+                            <div class="post-image"><a href="kanot"><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/thumbKanotKommitten.jpg" alt=""></a></div>
+                            <div class="post-title"><a href="kanot">Kanotkommittén</a></div>
+                            <div class="post-descr">Läs om kanot, ungdomsverksamheten och läger från kanotkommittén</div>
+                            <div class="post-more"><a href="kanot">LÄS MER</a></div>
+                        </li>
+                                            <li>
+                            <div class="post-image"><a href="tavlingskommitten"><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/thumbTavlingKommitte.jpg" alt=""></a></div>
+                            <div class="post-title"><a href="tavlingskommitten">Tävlingskommittén</a></div>
+                            <div class="post-descr">Läs om de kommande kappseglingarna från tävlingskommitténs verksamhet</div>
+                            <div class="post-more"><a href="tavlingskommitten">LÄS MER</a></div>
+                        </li>
+                                            <li>
+                            <div class="post-image"><a href="hamn"><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/Carousel_kommitte_test.jpg" alt=""></a></div>
+                            <div class="post-title"><a href="hamn">Hamnkommittén</a></div>
+                            <div class="post-descr">Läs om hamnkommittén</div>
+                            <div class="post-more"><a href="hamn">LÄS MER</a></div>
+                        </li>
+                                            <li>
+                            <div class="post-image"><a href="varv"><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/Carousel_kommitte_test.jpg" alt=""></a></div>
+                            <div class="post-title"><a href="varv">Varvskommittén</a></div>
+                            <div class="post-descr">Läs om varvskommittén</div>
+                            <div class="post-more"><a href="varv">LÄS MER</a></div>
+                        </li>
+                                            <li>
+                            <div class="post-image"><a href="utbildning"><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/Carousel_kommitte_test.jpg" alt=""></a></div>
+                            <div class="post-title"><a href="utbildning">Utbildningskommittén</a></div>
+                            <div class="post-descr">Läs om utbildningskommittén</div>
+                            <div class="post-more"><a href="utbildning">LÄS MER</a></div>
+                        </li>
+                                            <li>
+                            <div class="post-image"><a href=""><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/Carousel_kommitte_test.jpg" alt=""></a></div>
+                            <div class="post-title"><a href="">Fastighetskommittén</a></div>
+                            <div class="post-descr">Kommande!</div>
+                            <div class="post-more"><a href="">LÄS MER</a></div>
+                        </li>
+                                            <li>
+                            <div class="post-image"><a href=""><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/Carousel_kommitte_test.jpg" alt=""></a></div>
+                            <div class="post-title"><a href="">Marknadskommittén</a></div>
+                            <div class="post-descr">Kommande!</div>
+                            <div class="post-more"><a href="">LÄS MER</a></div>
+                        </li>
+                                            <li>
+                            <div class="post-image"><a href=""><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2013/02/Carousel_kommitte_test.jpg" alt=""></a></div>
+                            <div class="post-title"><a href="">Informationskommittén</a></div>
+                            <div class="post-descr">Kommande!</div>
+                            <div class="post-more"><a href="">LÄS MER</a></div>
+                        </li>
+                    
+                </ul>
+            </div><!--/ carousel content -->
+        </div><!--/ posts carousel -->
+        <script>
+            jQuery(document).ready(function($) {
+                $('#postcarousel22').carouFredSel({
+                    next : "#postcarousel22_next",
+                    prev : "#postcarousel22_prev",
+                    auto: false,
+                    circular: false,
+                    infinite: true,
+                    width: '100%',
+                    scroll: {
+                        items : 1
+                    }
+                });
+            });
+        </script>
+    </div><!--/ container -->
+</div><!--/ midle row odd --><div class="middle_row"><div class="container clearfix"><div class="col col_1_3">
+<div class="widget-container widget_featured_posts">
+<ul>
+<li class="post-item">
+<div class="post-title">
+                                    <a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/sjosattningsincident-slutar-val/" hidefocus="true" style="outline: none;">Sjösättningsincident slutar väl</a></p>
+<div class="post-meta">written by <a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/author/admin/" class="post-author" hidefocus="true" style="outline: none;">admin</a></div>
+</p></div>
+<div class="post-image"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/sjosattningsincident-slutar-val/" hidefocus="true" style="outline: none;"></a></div>
+<div class="post-descr">
+<h3>Som många av er känner till var vi med om en incident i samband årets första sjösättning.</h3>
+<p>I korthet kan man beskriva händelsen såhär; en segelbåt på väg ned för backen mot rampen höll på att välta ut över den plan </p>
+</div>
+<div class="post-more"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/sjosattningsincident-slutar-val/" hidefocus="true" style="outline: none;"><span>LÄS MER</span></a></div>
+</li>
+</ul></div>
+</p></div>
+<div class="col col_1_3">
+<div class="widget-container widget_featured_posts">
+<ul>
+<li class="post-item">
+<div class="post-title">
+                                    <a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/containerbrand-pa-nss-varv/" hidefocus="true" style="outline: none;">Containerbrand på NSS Varv</a></p>
+<div class="post-meta">written by <a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/author/admin/" class="post-author" hidefocus="true" style="outline: none;">admin</a></div>
+</p></div>
+<div class="post-image"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/containerbrand-pa-nss-varv/" hidefocus="true" style="outline: none;"></a></div>
+<div class="post-descr">
+<h3>I lördags (2016-04-09) larmades brandkåren ut på containerbrand på NSS Varv.</h3>
+<p>Det visade sig att någon slängt en engångsgrill i containern. Larm gick till brandkåren ca 18:30. Då börjar det bli lite människor i rörelse p</p>
+</div>
+<div class="post-more"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/containerbrand-pa-nss-varv/" hidefocus="true" style="outline: none;"><span>LÄS MER</span></a></div>
+</li>
+</ul></div>
+</p></div>
+<div class="col col_1_3">
+<div class="widget-container widget_featured_posts">
+<ul>
+<li class="post-item">
+<div class="post-title">
+                                    <a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nya-webbsidan-for-nss/" hidefocus="true" style="outline: none;">Nya webbsidan för NSS</a></p>
+<div class="post-meta">written by <a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/author/admin/" class="post-author" hidefocus="true" style="outline: none;">admin</a></div>
+</p></div>
+<div class="post-image"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nya-webbsidan-for-nss/" hidefocus="true" style="outline: none;"></a></div>
+<div class="post-descr">
+<p>Vi provar nu nya webbsidan, men kan fortfarande finnas material som inte är överflyttat. Du kan alltid nå den gamla sidan på <a href="https://web.archive.org/web/20160623113727/http://www.idrottonline.se/NynashamnsSS/" target="_blank">http://www.idrottonline.se/NynashamnsSS/</a>.</p>
+</div>
+<div class="post-more"><a href="https://web.archive.org/web/20160623113727/http://www.nynashamnyachtclub.se/nya-webbsidan-for-nss/" hidefocus="true" style="outline: none;"><span>LÄS MER</span></a></div>
+</li>
+</ul></div>
+</p></div>
+</div></div><div class="middle_row odd"><div class="container clearfix"><h2>NSS sponsorer</h2>
+<p><a target="_blank" href="https://web.archive.org/web/20160623113727/http://svenskasjo.se/"><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2016/03/svenskasjo_980x240_sofie-1.gif" alt="Svenska Sjö banner"></a></p>
+<table width="980" align="center" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="326" align="center" valign="bottom"><a href="https://web.archive.org/web/20160623113727/http://www.ica.se/butiker/maxi/nynashamn/maxi-ica-stormarknad-nynashamn-15278/start/" target="_blank"><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2015/09/maxi-ica-stormarknad-logotyp.png" alt="logo-ICA"></a></td>
+<td width="326" align="center" valign="bottom"><a href="https://web.archive.org/web/20160623113727/http://lansfast.se/nynashamn" target="_blank"><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2016/03/logo_lansfast.png" alt="logo_lansforsakringar"></a></td>
+<td width="326" align="center" valign="bottom"><a href="https://web.archive.org/web/20160623113727/http://bds.se/bds/AddesMarinFordonsservice/" target="_blank"><img src="https://web.archive.org/web/20160623113727im_/http://www.nynashamnyachtclub.se/wp-content/uploads/2015/09/logo.png" alt="logo_BDS"></a></td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="footer_widgetarea">
+    <div class="container clearfix">
+        
+        <div class="f_col f_col_1">
+            <div class="widget-container widget_text">        <h3 class="widget-title">Kontakta NSS</h3>			<div class="textwidget">Strandvägen 26<br>
+149 34 NYNÄSHAMN<br>
+Tel: 08- 520 128 20
+<br><br>
+Kansli, Eva Joelsson:<br>
+info@nhss.se<br>
+Webbansvarig, Bobo Engren:<br>
+webmaster@nhss.se</div>
+		</div>        </div>
+
+        <div class="f_col f_col_2">
+            <div class="widget-container widget_text">        <h3 class="widget-title">Kansliets öppettider</h3>			<div class="textwidget">Måndag 15-19<br>
+Tisdag-Fredag 12-15<br>
+(stängt på fredagar 1 okt – 31 mars !)</div>
+		</div>        </div>
+
+        <div class="f_col f_col_3">
+            <div class="widget-container widget_text">        <h3 class="widget-title">Inbetalning och organisationsnummer</h3>			<div class="textwidget">Bankgiro 603-4714<br>
+Org.nr: 812400-0566</div>
+		</div>        </div>
+
+        <div class="f_col f_col_4">
+            <div class="widget-container widget_text">        <h3 class="widget-title">Övrig kontakt</h3>			<div class="textwidget">Vaktstuga vid Trehörningsviken:<br>
+Tel: 08-520 110 50<br><br>
+
+Gamla Klubbhuset:<br>
+Tel: 08-520 150 68</div>
+		</div>        </div>
+        <div class="clear"></div>
+
+        </div>
+</div>
+<div class="footer_social">
+                <div class="container"><a href="https://web.archive.org/web/20160623113727/https://www.facebook.com/groups/611767745642525/" class="social-fb" hidefocus="true" style="outline: none;"><span>Facebook</span></a></div>
+                </div>
+<div class="footer">
+    <div class="container clearfix">
+            <div class="botmenu">
+            </div>
+            <div class="copyright">© 2016, NSS - Nynäshamns Segelsällskap</div>
+    </div>
+</div>
+
+<link rel="stylesheet" id="tfuse-newsletter-css-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/framework/extensions/newsletter/static/css/newsletter_clientside.css?ver=4.4.4" type="text/css" media="all"/>
+<link rel="stylesheet" id="animate-css" href="https://web.archive.org/web/20160623113727cs_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/css/animate.min.css?ver=4.4.4" type="text/css" media="all"/>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-includes/js/comment-reply.min.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-includes/js/hoverIntent.min.js?ver=1.8.1"></script>
+<script type="text/javascript" src="//web.archive.org/web/20160623113727js_/http://maps.google.com/maps/api/js?sensor=false&amp;ver=1.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/js/jquery.gmap.min.js?ver=3.3.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-includes/js/wp-embed.min.js?ver=4.4.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20160623113727js_/http://www.nynashamnyachtclub.se/wp-content/themes/conexus-parent/js/jquery.onebyone.min.js?ver=1.0"></script>
+<!-- {tfuse-footer-includes} --></div><!-- /.body_wrap -->
 </body>
-</html>
+</html><!--
+     FILE ARCHIVED ON 11:37:27 Jun 23, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:54:10 Jan 27, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 245.008
+  exclusion.robots: 0.203
+  exclusion.robots.policy: 0.196
+  RedisCDXSource: 0.772
+  esindex: 0.008
+  LoadShardBlock: 224.468 (3)
+  PetaboxLoader3.datanode: 133.489 (4)
+  CDXLines.iter: 16.731 (3)
+  load_resource: 156.912
+  PetaboxLoader3.resolve: 90.831
+-->

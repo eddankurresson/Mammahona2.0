@@ -27,40 +27,6 @@ body {
   /* grid-column-gap: 10px; - if you want gap between the columns */
 }
 
-.contentOut{
-  border-style: transparent;
-  grid-area: contentOut;
-  padding: 60px;
-  text-align: center;
-  font-size: 35px;
-  /*width: 300px;*/
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'contentOut contentOut contentOut contentOut contentOut contentOut' 
-    'left middle right right right right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-}
-.contentIn{
-  border-style: transparent;
-  grid-area: contentOut;
-  background-color: #BFE4F4;
-  padding: 0px;
-  text-align: center;
-  font-size: 35px;
-  /*width: 300px;*/
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'contentOut contentOut contentOut contentOut contentOut contentOut' 
-    'left middle right right right right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-  grid-row-gap: 0px;
-}
-
-
 /* The grid container */
 .grid-container {
   border-style: transparent;
@@ -78,7 +44,7 @@ body {
 .middle,
 .right {
 
-  border-style: solid   ;
+  border-style: transparent   ;
 }
 
 /* Style the left column */
@@ -101,7 +67,6 @@ body {
   border-style: transparent;
   grid-area: footer;
   background-color: #BFE4F4;
-  padding: 15px;
   text-align: center;
   display: grid;
   grid-template-areas: 
@@ -180,6 +145,7 @@ h2{
   display: table;
   clear: both;
 }
+
 </style>
 <head> 
     <div class="grid-container">
@@ -191,15 +157,15 @@ h2{
             
             
                 <a href="index.html2">Om Oss </a>
-                <a href="index.html2">Tävlingar</a>
+                <a href="index.html2">T&auml;vlingar</a>
                 <a href="index.html2">Kanot</a>
                 <a href="index.html2">Ungdomsverksamhet</a> 
             </div>
             
             <div class="right">
-            <a href="index.html2">Kläder</a>
+            <a href="index.html2">Kl&auml;der</a>
             <a href="index.html2">Kontakt</a>
-            <a href="index.html2" class="button" >&nbsp;Nyheter&nbsp;</a>
+            <a href="nyheter.html" class="button" >&nbsp;Nyheter&nbsp;</a>
             </div>
         </div>
 </head>
@@ -210,16 +176,19 @@ h2{
     <div class="grid-container">
         <div class="header">
             <div class ="left" style="background-color: #BFE4F4;">
-                <H1>Välkommen Till <br> Nynäshamns Segelsällskap <br></H1>
+                <H1>V&auml;lkommen Till <br> Nyn&auml;shamns Segels&auml;llskap <br></H1>
                 <h2>
-                NSS är en aktiv och betydelsefull aktör i  <br> Nynäshamn med en naturlig och mångårig  <br> 
-                verksamhet med inriktning på sjöliv, båtsport, <br> segling och ungdoms- verksamhet. <br>
-                NSS äger en förnämlig klubbanläggning, varv och<br> bryggor vid Fagerviken, många bryggor i <br> 
-                Trehörningsviken samt klubbholmen Lacka strax norr om Nynäshamn. 
+                  NSS &auml;r en aktiv och betydelsefull akt&ouml;r i  <br> Nyn&auml;shamn med en naturlig och m&aring;ng&aring;rig  <br> 
+                  verksamhet med inriktning p&aring; sj&ouml;liv, b&aring;tsport, <br> segling och ungdoms- verksamhet. <br>
+                  NSS &auml;ger en f&ouml;rn&auml;lig klubbanl&auml;ggning, varv och<br> bryggor vid Fagerviken, m&aring;nga bryggor i <br> 
+                  Treh&ouml;rningsviken samt klubbholmen Lacka strax norr om Nyn&auml;shamn. 
                         </h2>
                     
             </div>
-
+            <div class ="middle" style="background-color: #BFE4F4;">
+          
+                  
+          </div>
             <div class="right" style="background-color: #BFE4F4;">
 
                 <h2></h2>  
@@ -231,23 +200,15 @@ h2{
         </div>
    
         <div class ="left" style="background-color: #BFE4F4;"><H1>Välkommen Till <br> Nynäshamns Segelsällskap <br></H1>
-            <h2>
-            NSS är en aktiv och betydelsefull aktör i  <br> Nynäshamn med en naturlig och mångårig  <br> 
-            verksamhet med inriktning på sjöliv, båtsport, <br> segling och ungdoms- verksamhet. <br>
-            NSS äger en förnämlig klubbanläggning, varv och<br> bryggor vid Fagerviken, många bryggor i <br> 
-            Trehörningsviken samt klubbholmen Lacka strax norr om Nynäshamn. 
-            </h2>
-                
+          NSS &auml;r en aktiv och betydelsefull akt&ouml;r i  <br> Nyn&auml;shamn med en naturlig och m&aring;ng&aring;rig  <br> 
+          verksamhet med inriktning p&aring; sj&ouml;liv, b&aring;tsport, <br> segling och ungdoms- verksamhet. <br>
+          NSS &auml;ger en f&ouml;rn&auml;lig klubbanl&auml;ggning, varv och<br> bryggor vid Fagerviken, m&aring;nga bryggor i <br> 
+          Treh&ouml;rningsviken samt klubbholmen Lacka strax norr om Nyn&auml;shamn. 
         </div>
 
         <div class ="middle" style="background-color: #BFE4F4;">
-            <H1>Välkommen Till <br> Nynäshamns Segelsällskap <br></H1>
-            <h2>
-            NSS är en aktiv och betydelsefull aktör i  <br> Nynäshamn med en naturlig och mångårig  <br> 
-            verksamhet med inriktning på sjöliv, båtsport, <br> segling och ungdoms- verksamhet. <br>
-            NSS äger en förnämlig klubbanläggning, varv och<br> bryggor vid Fagerviken, många bryggor i <br> 
-            Trehörningsviken samt klubbholmen Lacka strax norr om Nynäshamn. 
-            </h2>
+            
+           
                 
         </div>
 
@@ -259,13 +220,18 @@ h2{
 
             <h2></h2>
         </div>
-    
+   
         <div class="footer">
+          
             <div class="left" style="background-color: #BFE4F4;">
                 Öppettider <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
                 Kontakta Oss
             </div>
-        
+            <div class ="middle" style="background-color: #BFE4F4;">
+            
+           <h1></h1>
+                
+            </div>
             <div class="right" style="background-color: #BFE4F4;">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.
                 4562557675717!2d17.941270816054566!3d58.89023678150737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
