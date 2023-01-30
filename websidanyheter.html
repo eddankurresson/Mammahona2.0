@@ -242,9 +242,49 @@ body {
 }
 .container .item:nth-child(21 ) {
   background-image: url("http://aspiringiconicmiscreation.files.wordpress.com/2013/04/peace-album-cover.jpg");
-}
+}  .news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+  }
 
+  .article-container {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 28vw; /* Increase this value if you want more articles per row, decrease if you want less*/
+    min-width: 150px;
+    max-width: 700px;
+    box-shadow: 2px 2px 25px 2px rgba(0,0,0,0.9);
+    margin: 20px;
+    transition: 0.3s;
+    font-size: 14px;
+    font-family: 'Lora', serif;
+    background-color: #ffffff;
+  }
 
+  @media only screen and (max-width: 850px) {
+    .article-container {
+      width: 90vw;
+    }
+  }
+
+  .article-container:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 2px 25px 2px rgba(139, 139, 139, 0.89);
+
+  }
+
+  .article-image {
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .article-title {
+    padding: 10px;
+  }
 </style>
 <head> 
     <div class="grid-container">
@@ -301,50 +341,7 @@ body {
         <div class ="left" style="background-color: #BFE4F4;">
            <!--Copy this into your website or website generator, in the HTML section.-->
 <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-<style>
-  .news-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-between;
-  }
 
-  .article-container {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    width: 28vw; /* Increase this value if you want more articles per row, decrease if you want less*/
-    min-width: 150px;
-    max-width: 700px;
-    box-shadow: 2px 2px 25px 2px rgba(0,0,0,0.9);
-    margin: 20px;
-    transition: 0.3s;
-    font-size: 14px;
-    font-family: 'Lora', serif;
-  }
-
-  @media only screen and (max-width: 850px) {
-    .article-container {
-      width: 90vw;
-    }
-  }
-
-  .article-container:hover {
-    transform: scale(1.02);
-    box-shadow: 2px 2px 25px 2px rgba(139, 139, 139, 0.89);
-
-  }
-
-  .article-image {
-    width: 100%;
-    max-height: 100%;
-  }
-
-  .article-title {
-    padding: 10px;
-  }
-</style>
 
 <script>
   // Add, remove, modify your articles here
@@ -427,50 +424,8 @@ body {
         <div class ="middle" style="background-color: #BFE4F4;">
           <!--Copy this into your website or website generator, in the HTML section.-->
 <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-<style>
-  .news-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-between;
-  }
 
-  .article-container {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    width: 28vw; /* Increase this value if you want more articles per row, decrease if you want less*/
-    min-width: 150px;
-    max-width: 700px;
-    box-shadow: 2px 2px 25px 2px rgba(0,0,0,0.9);
-    margin: 20px;
-    transition: 0.3s;
-    font-size: 14px;
-    font-family: 'Lora', serif;
-  }
 
-  @media only screen and (max-width: 850px) {
-    .article-container {
-      width: 90vw;
-    }
-  }
-
-  .article-container:hover {
-    transform: scale(1.02);
-    box-shadow: 2px 2px 25px 2px rgba(139, 139, 139, 0.89);
-
-  }
-
-  .article-image {
-    width: 100%;
-    max-height: 100%;
-  }
-
-  .article-title {
-    padding: 10px;
-  }
-</style>
 
 <script>
   // Add, remove, modify your articles here
@@ -563,6 +518,139 @@ body {
                 </div>
                 <div class='block'>
                   <div class='small'>
+                    <div class='text'>1</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>2</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>3</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>4</div>
+                  </div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>5</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>6</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>7</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>8</div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>9</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>10</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>11</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>12</div>
+                  </div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>13</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>14</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>15</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>16</div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>17</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>18</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>19</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>20</div>
+                  </div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>21</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>22</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>23</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>24</div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>25</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>26</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>27</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>28</div>
+                  </div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
+                    <div class='text'>29</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>30</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>31</div>
+                  </div>
+                  <div class='small'>
+                    <div class='text'>32</div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class='text'></div>
+                </div>
+                <div class='block'>
+                  <div class='small'>
                     <div class='text'>33</div>
                   </div>
                   <div class='small'>
@@ -575,73 +663,8 @@ body {
                     <div class='text'>36</div>
                   </div>
                 </div>
-                <div class='block'>
-                  <div class='small'>
-                    <div class='text'>37</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>38</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>39</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>40</div>
-                  </div>
-                </div>
                 <div class='item'>
                   <div class='text'></div>
-                </div>
-                <div class='item'>
-                  <div class='text'></div>
-                </div>
-                <div class='block'>
-                  <div class='small'>
-                    <div class='text'>41</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>42</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>43</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>44</div>
-                  </div>
-                </div>
-                <div class='block'>
-                  <div class='small'>
-                    <div class='text'>45</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>46</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>47</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>48</div>
-                  </div>
-                </div>
-                <div class='item'>
-                  <div class='text'></div>
-                </div>
-                <div class='item'>
-                  <div class='text'></div>
-                </div>
-                <div class='block'>
-                  <div class='small'>
-                    <div class='text'>33</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>34</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>35</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>36</div>
-                  </div>
                 </div>
                 <div class='block'>
                   <div class='small'>
@@ -654,75 +677,9 @@ body {
                     <div class='text'>39</div>
                   </div>
                   <div class='small'>
-                    <div class='text'>40</div>
-                  </div>
-                </div>
-                <div class='item'>
-                  <div class='text'></div>
-                </div>
-                <div class='item'>
-                  <div class='text'></div>
-                </div>
-                <div class='block'>
-                  <div class='small'>
-                    <div class='text'>41</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>42</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>43</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>44</div>
-                  </div>
-                </div>
-                <div class='block'>
-                  <div class='small'>
-                    <div class='text'>45</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>46</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>47</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>48</div>
-                  </div>
-                </div>
-                <div class='item'>
-                  <div class='text'></div>
-                </div>
-                <div class='block'>
-                  <div class='small'>
-                    <div class='text'>45</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>46</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>47</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>48</div>
-                  </div>
-                </div>
-                <div class='item'>
-                  <div class='text'></div>
-                </div>
-                <div class='block'>
-                  <div class='small'>
-                    <div class='text'>45</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>46</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>47</div>
-                  </div>
-                  <div class='small'>
-                    <div class='text'>48</div>
+                    <div class='text'>40
+                      
+                    </div>
                   </div>
                 </div>
                 <div class='item'>
