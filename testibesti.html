@@ -83,9 +83,7 @@ border-style: transparent   ;
 
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-
-
-@media only screen and (max-width: 850px) {
+@media (min-width: 768px) {
   .grid-container  {
     grid-template-areas: 
       'header header header header header header' 
@@ -99,12 +97,11 @@ border-style: transparent   ;
   }
   .right{
     grid-area: middle;
-  }  
-  .article-container {
-    width: 90vw;
   }
-}
 
+  .column {
+    width: 100%;}
+}
 
 
 
@@ -281,7 +278,11 @@ body {
     background-color: #ffffff;
   }
 
-
+  @media only screen and (max-width: 850px) {
+    .article-container {
+      width: 90vw;
+    }
+  }
 
   .article-container:hover {
     transform: scale(1.02);
