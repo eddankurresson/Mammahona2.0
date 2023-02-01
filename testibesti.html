@@ -82,21 +82,27 @@ border-style: transparent   ;
 }
 
 
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (min-width: 768px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+  .left{
+    grid-area: middle;
+  }
+  .right{
+    grid-area: middle;
+  }
 
-
-@media only screen and (max-width: 600px) {
-    .article-container {
-      width: 90vw;
-    }
-    .left{
-      grid-area: middle;
-    }
-    .right{
-      grid-area: middle;
-    }
   .column {
     width: 100%;}
-  }
+}
+
 
 
 a:link {
@@ -272,6 +278,11 @@ body {
     background-color: #ffffff;
   }
 
+  @media only screen and (max-width: 850px) {
+    .article-container {
+      width: 90vw;
+    }
+  }
 
   .article-container:hover {
     transform: scale(1.02);
@@ -298,14 +309,14 @@ body {
             
             
                 <a href="index.html2">Om Oss </a>
-                <a href="index.html2">Tävlingar</a>
+                <a href="index.html2">T&auml;vlingar</a>
                 <a href="index.html2">Kanot</a>
                 <a href="index.html2">Ungdomsverksamhet</a> 
                 <a href="index.html2">Lokaler Och Områden</a> 
             </div>
             
             <div class="right">
-            <a href="">Kläder</a>
+            <a href="testibesti.html">Kl&auml;der</a>
             <a href="nyheter.html">Nyhetsarkiv</a>
             <a href="#footer" class="button" >&nbsp;Kontakt&nbsp;</a>
             </div>
