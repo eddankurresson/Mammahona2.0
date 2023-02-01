@@ -82,26 +82,13 @@ border-style: transparent   ;
 }
 
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (min-width: 768px) {
-  .grid-container  {
-    grid-template-areas: 
-      'header header header header header header' 
-      'left left left left left left' 
-      'middle middle middle middle middle middle' 
-      'right right right right right right' 
-      'footer footer footer footer footer footer';
-  }
-  .column {
-    width: 100%;}
-}
-@media (max-width: 768px) {
 
 
 @media only screen and (max-width: 600px) {
     .article-container {
       width: 90vw;
-      .grid-container  {
+    }
+    .grid-container  {
     grid-template-areas: 
       'header header header header header header' 
       'left left left left left left'  
@@ -110,8 +97,6 @@ border-style: transparent   ;
   }
   .column {
     width: 100%;}
-}
-    }
   }
 
 
