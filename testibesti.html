@@ -25,7 +25,7 @@ body {
   grid-template-areas: 
     'header header header header header header' 
 
-    'left middle middle middle right right' 
+    'left left middle middle right right' 
     'footer footer footer footer footer footer';
   /* grid-column-gap: 10px; - if you want gap between the columns */
 }
@@ -66,6 +66,7 @@ border-style: transparent   ;
 
 /* Style the footer */
 .footer {
+  page-break-after: always;
   border-style: transparent;
   grid-area: footer;
   background-color: #BFE4F4;
@@ -84,13 +85,7 @@ border-style: transparent   ;
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media (min-width: 768px) {
-  .grid-container  {
-    grid-template-areas: 
-      'header header header header header header' 
-      'left left left left left left' 
-      'middle middle middle middle middle middle' 
-      'right right right right right right' 
-      'footer footer footer footer footer footer';
+  #
   }
   .left{
     grid-area: middle;
@@ -99,10 +94,10 @@ border-style: transparent   ;
     grid-area: middle;
   }
 
-  .column {
-    width: 100%;}
-}
 
+}
+.column {
+    width: 50%;}
 
 
 a:link {
@@ -298,13 +293,41 @@ body {
   .article-title {
     padding: 10px;
   }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>
 <head> 
     <div class="grid-container">
         <div class="header">
             <div class ="left">
+              
                 <a href="index.html"> <img src="logga.png" style="max-width: 20%;">  </a>
+
+              <div class="dropdown">
+                <span>Mouse over me</span>
+                <div class="dropdown-content">
+                <p>Hello World!</p>
+                </div>
+              </div>
+
             </div>
+            
             <div class="middle">
             
             
@@ -332,7 +355,7 @@ body {
 
         <h2></h2>  
     
-        <img style="scroll-padding-left: 10px;" src="batomoss.jpg">
+        <img style="scale: 0.8;" src="batomoss.jpg">
 
         <h2></h2>
     </div>
@@ -358,7 +381,7 @@ body {
 
             <h2></h2>  
         
-            <img style="padding-right: 10px;" src="https://bildix.mmcloud.se/bildix/api/images/kpTnboHCr3OqY3sieb1QTf2sq0k.jpeg?fit=crop&w=980&h=551">
+            <img style="scale: 0.8;" src="https://bildix.mmcloud.se/bildix/api/images/kpTnboHCr3OqY3sieb1QTf2sq0k.jpeg?fit=crop&w=980&h=551">
 
             <h2></h2>
           </div>
