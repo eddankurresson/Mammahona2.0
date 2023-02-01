@@ -83,7 +83,7 @@ border-style: transparent   ;
 
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .grid-container  {
     grid-template-areas: 
       'header header header header header header' 
@@ -99,8 +99,7 @@ border-style: transparent   ;
     grid-area: middle;
   }
 
-  .column {
-    width: 100%;}
+
 }
 
 
