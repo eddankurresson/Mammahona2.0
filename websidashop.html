@@ -35,121 +35,117 @@
   padding: 10px;
 }
 
+  a:link {
+  color: #060101;
+  font-size: 15px;
+  text-align: left;
+  text-decoration: none;
+  }
+  a:visited {
+  color: #000000;
+  text-decoration: none;
+  }
+  a:hover {
+  color: #BFE4F4;
+  text-decoration: none;
+  }
+  a:active {
+  color: #BFE4F4;
+  text-decoration: none;
+  }
+  a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  background-color: #49c8ff;
+  border-radius: 50px;
 
+  }
+  h1{
+  align-items: left;
+  font-size: 32px;
+  font-style: normal;
+  text-align: left;
+  padding-left: 30px;
+  padding-top: 20px;
+  }
+  h2{
+  align-items: left;
+  font-size: 16px;
+  font-style: normal;
+  text-align: left;
+  padding-left: 30px;
+  }
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  @import url(https://fonts.googleapis.com/css?family=Offside);
+  * {
+  box-sizing: border-box;
+  }
+  body {
+  background: #ffffff;
+  font-family: "Offside", Helvetica;
+  text-transform: uppercase;
+  padding: 20px;
+  } 
+  .news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  }
 
+  .article-container {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: 28vw; /* Increase this value if you want more articles per row, decrease if you want less*/
+  min-width: 150px;
+  max-width: 700px;
+  box-shadow: 2px 2px 25px 2px rgba(0,0,0,0.9);
+  margin: 20px;
+  transition: 0.3s;
+  font-size: 14px;
 
-
-         a:link {
-         color: #060101;
-         font-size: 15px;
-         text-align: left;
-         text-decoration: none;
-         }
-         a:visited {
-         color: #000000;
-         text-decoration: none;
-         }
-         a:hover {
-         color: #BFE4F4;
-         text-decoration: none;
-         }
-         a:active {
-         color: #BFE4F4;
-         text-decoration: none;
-         }
-         a.button {
-         -webkit-appearance: button;
-         -moz-appearance: button;
-         appearance: button;
-         text-decoration: none;
-         background-color: #49c8ff;
-         border-radius: 50px;
-         
-         }
-         h1{
-         align-items: left;
-         font-size: 32px;
-         font-style: normal;
-         text-align: left;
-         padding-left: 30px;
-         padding-top: 20px;
-         }
-         h2{
-         align-items: left;
-         font-size: 16px;
-         font-style: normal;
-         text-align: left;
-         padding-left: 30px;
-         }
-         .row:after {
-         content: "";
-         display: table;
-         clear: both;
-         }
-         @import url(https://fonts.googleapis.com/css?family=Offside);
-         * {
-         box-sizing: border-box;
-         }
-         body {
-         background: #ffffff;
-         font-family: "Offside", Helvetica;
-         text-transform: uppercase;
-         padding: 20px;
-         } 
-         .news-container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-content: space-between;
-        }
-
-         .article-container {
-         text-decoration: none;
-         color: black;
-         display: flex;
-         flex-direction: column;
-         width: 28vw; /* Increase this value if you want more articles per row, decrease if you want less*/
-         min-width: 150px;
-         max-width: 700px;
-         box-shadow: 2px 2px 25px 2px rgba(0,0,0,0.9);
-         margin: 20px;
-         transition: 0.3s;
-         font-size: 14px;
-         
-         background-color: #ffffff;
-         }
-         @media only screen and (max-width: 850px) {
-         .article-container {
-         width: 90vw;
-         }
-         }
-         .article-container:hover {
-         transform: scale(1.02);
-         box-shadow: 2px 2px 25px 2px rgba(139, 139, 139, 0.89);
-         }
-         .article-image {
-         width: 100%;
-         max-height: 100%;
-         }
-         .article-title {
-         padding: 10px;
-         }
-         .dropdown {
-         position: relative;
-         display: inline-block;
-         }
-         .dropdown-content {
-         display: none;
-         position: absolute;
-         background-color: #f9f9f9;
-         min-width: 160px;
-         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-         padding: 12px 16px;
-         z-index: 1;
-         }
-         .dropdown:hover .dropdown-content {
-         display: block;
-         }
+  background-color: #ffffff;
+  }
+  @media only screen and (max-width: 850px) {
+  .article-container {
+  width: 90vw;
+  }
+  }
+  .article-container:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 25px 2px rgba(139, 139, 139, 0.89);
+  }
+  .article-image {
+  width: 100%;
+  max-height: 100%;
+  }
+  .article-title {
+  padding: 10px;
+  }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+  }
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  }
+  .dropdown:hover .dropdown-content {
+  display: block;
+  }
 </style>
 </head>
 <body>
@@ -245,6 +241,37 @@
         onClickLink: 'https://www.nynashamnsposten.se/2021-04-29/priset-ar-i-hamn-nss-ar-arets-batklubb--for-oss-handlar-det-inte-bara-om-segling',
         imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/598f73a0-da2c-42a6-9d3e-dd929d7b99d3.jpeg?fit=crop&w=1620&h=911',
         title: 'Priset är i hamn! NSS är Årets båtklubb – ”För oss handlar det inte bara om segling”'
+      },
+      {
+        onClickLink: 'https://www.nynashamnsposten.se/2021-02-13/nss-utsedd-till-arets-batklubb-sa-roligt-och-ett-kvitto-pa-att-vi-gor-saker-ratt',
+        imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/1ba259d2-51c7-4328-9fa9-fe2b3c68fe3d.jpeg?fit=crop&w=1620&h=911',
+        title: 'NSS utsedd till Årets Båtklubb: ”Så roligt och ett kvitto på att vi gör saker rätt”'
+      },
+      {
+       
+        onClickLink: 'https://www.nynashamnsposten.se/2020-08-15/coronaviruset-slog-ut-de-stora-evenemangen--men-arrangorerna-laddar-for-comeback-en-tragedi-hur-det-blivit',
+        imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/2eb431e5-7efa-4d11-9c85-bc5f682f6e3b.png?fit=crop&w=1620&h=911',
+        title: 'Coronaviruset slog ut de stora evenemangen – men arrangörerna laddar för comeback: ”En tragedi hur det blivit'
+      },
+      {
+        onClickLink: 'https://www.nynashamnsposten.se/2020-07-28/julia-och-hanna-os-laddar-i-nynashamn-jattebra-vindar--exakt-som-i-japan',
+        imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/7c15ae4e-1f28-4941-93aa-9ebd113eca8b.png?fit=crop&w=1620&h=911',
+        title: 'Julia och Hanna OS-laddar i Nynäshamn: ”Jättebra vindar – exakt som i Japan”'
+      },
+      {
+        onClickLink: 'https://www.nynashamnsposten.se/2020-02-16/saltstankta-bonan-may-95-om-tuffa-seglingar-och-jamlikhet-pa-sjon-vi-tog-alltid-rodret-varannan-gang',
+        imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/6c86e7cb-ac83-43a0-a73f-8f8e720bf686.jpeg?fit=crop&w=1620&h=911',
+        title: 'Saltstänkta bönan May, 95, om tuffa seglingar och jämlikhet på sjön: ”Vi tog alltid rodret varannan gång”'
+      },
+      {
+        onClickLink: 'https://www.nynashamnsposten.se/2020-06-29/traning-och-lek-under-en-fartfylld-vecka-pa-vattnet-ett-bra-satt-att-lara-sig-en-ny-sport',
+        imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/16a4647a-25aa-43c9-adca-28377f95e8b0.png?fit=crop&w=1620&h=911',
+        title: 'Träning och lek under en fartfylld vecka på vattnet: ”Ett bra sätt att lära sig en ny sport”'
+      },
+      {
+        onClickLink: 'https://www.nynashamnsposten.se/2020-03-28/klart-nss-koper-granntomten-pa-strandvagen--satter-punkt-for-en-14-arig-konflikt-kanns-jatteskont',
+        imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/99a22c20-5c1c-4add-83a6-ef195ae4ebf4.png?fit=crop&w=1620&h=911',
+        title: 'Klart: NSS köper granntomten på Strandvägen – sätter punkt för en 14-årig konflikt: ”Känns jätteskönt”'
       }
     ]
     
