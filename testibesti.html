@@ -9,12 +9,10 @@
 .item1 { grid-area: headerleft; }
 .item2 { grid-area: headermiddle; }
 .item3 { grid-area: headerright; }
-.item4 { grid-area: leftwelcome;
-  box-shadow: 30vh 0 0 0#BFE4F4; }
+.item4 { grid-area: leftwelcome;}
 .item5 { grid-area: middlewelcome; }
 .item6 { grid-area: rightwelcome; }
-.item7 { grid-area: leftinfo; 
-  box-shadow: 30vh 0 0 0#BFE4F4;}
+.item7 { grid-area: leftinfo; }
 .item8 { grid-area: middleinfo; }
 .item9 { grid-area: rightinfo; }
 .item10 { grid-area: articleleft; }
@@ -29,18 +27,17 @@
   display: grid;
   grid-template-areas:
     'headerleft headermiddle headermiddle headermiddle headermiddle headerright'
-    'leftwelcome leftwelcome middleleft middleleft rightwelcome rightwelcome'
+    'leftwelcome leftwelcome leftwelcome rightwelcome  rightwelcome rightwelcome'
     'leftinfo leftinfo rightinfo rightinfo rightinfo rightinfo'
     'articleleft articleleft articleleft articleleft articleleft articleleft'
     'footerleft footerleft footerleft footerright footerright footerright';
-  gap: 10px;
   background-color: #ffffff;
-  padding: 10px;
+  row-gap: 30px;
 }
 @media only screen and (max-width: 600px) {
   .item4
   .item7{
-    box-shadow: none;
+    box-shadow: 1vh 0 0 0 #BFE4F4;
   }
     .grid-container{
       grid-template-areas:
@@ -348,14 +345,14 @@
 
   </div>
   -->
-  <div class="item13" style="background-color: #BFE4F4;  box-shadow: 0 50vh 0 50vh #BFE4F4;">
+  <div class="item13" style="background-color: #BFE4F4;">
     <br> <br> <br> <br> <br> <br> <br>               
     Öppettider <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
     Kontakta Oss
   </div>
   <div class="item14" style="background-color: #BFE4F4;">
   </div>  
-  <div class="item15" style="background-color: #BFE4F4;  box-shadow: 0 50vh 0 50vh #BFE4F4;">
+  <div class="item15" style="background-color: #BFE4F4;">
     <br>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.
     4562557675717!2d17.941270816054566!3d58.89023678150737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
