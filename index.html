@@ -271,17 +271,10 @@ html {
   overflow: hidden;
   height: 0;
   transition: 1s;
+
 }
 
-.list-item {
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-  transition: 1s, transform 1s var(--delay);
-  transform: translateX(-100%);
-  user-select: none;
-  cursor: pointer;
-}
+
 
 .list-item:hover {
   background-color: dodgerblue;
@@ -306,7 +299,7 @@ html {
 
 <div class="grid-container">
   <div class="item1">
-    <a href="index.html"> <img src="files/logga.png" style="max-width: 20%;">  </a>
+    <a href="index.html"> <img src="files/logga.png" style="max-width: 40%;">  </a>
   </div>
   <div class="item2"  >
     <a href="omoss.html" id="desktop">Om Oss </a>
@@ -322,19 +315,19 @@ html {
         
         <button class="toggle">Meny</button>
         <ul class="list">
-          <li class="list-item"><a href="omoss.html">Om Oss </a></li>
-          <li class="list-item"><a href="tavlingar.html">Tävlingar</a></li>
-          <li class="list-item"><a href="kanot.html">Kanot</a></li>
-          <li class="list-item"><a href="undgomsverksamhet.html">Ungdomsverksamhet</a> </li>
-          <li class="list-item"><a href="faciliteter.html">Faciliteter</a> </li>
-          <li class="list-item"><a href="blimedlem.html"">Bli Medlem</a></li>
-          <li class="list-item""><a href="veckobrev.html"">Veckobrev</a> </li>
-          <li class="list-item"><a href="https://www.klubbtryck.se/nhss/">Kläder</a></li>
-          <li class="list-item"><a href="nyheter.html">Nyhetsarkiv</a></li>
-          <li class="list-item" > <a href="#mobilemaps">Kontakt</a></li>
+          <a href="omoss.html"> <li class="list-item">Om Oss </li> </a>
+          <a href="tavlingar.html"> <li class="list-item">Tävlingar</li> </a>
+          <a href="kanot.html"> <li class="list-item">Kanot</li></a>
+          <a href="undgomsverksamhet.html"><li class="list-item">Ungdomsverksamhet </li> </a>
+          <a href="faciliteter.html"> <li class="list-item">Faciliteter </li> </a>
+          <a href="blimedlem.html""> <li class="list-item">Bli Medlem</li> </a>
+          <a href="veckobrev.html""> <li class="list-item"">Veckobrev</li> </a> 
+          <a href="https://www.klubbtryck.se/nhss/"><li class="list-item">Kläder</li></a>
+          <a href="nyheter.html"> <li class="list-item">Nyhetsarkiv</li> </a>
+          <a href="#mobilemaps"> <li class="list-item"> Kontakt</li> </a>
           
         </ul>
-
+ 
       </div>
 
 
