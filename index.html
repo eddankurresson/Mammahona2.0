@@ -1,388 +1,388 @@
 <!DOCTYPE html>
+<meta http-equiv="content-type" content = "text/html" charset = "utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/x-icon" href="logga.png">
+<title>NSS</title>
 <html>
-  <meta http-equiv="content-type" content = "text/html" charset = "utf-8"/>
-  <link rel="icon" type="image/x-icon" href="logga.png">
-  <title>NSS</title>
 <head>
 <style>
-* {
-  box-sizing: border-box;
-}
+.item1 { grid-area: headerleft; }
+.item2 { grid-area: headermiddle; }
+.item3 { grid-area: headerright; }
+.item4 { grid-area: leftwelcome;}
+.item5 { grid-area: middlewelcome; }
+.item6 { grid-area: rightwelcome; }
+.item7 { grid-area: leftinfo; }
+.item8 { grid-area: middleinfo; }
+.item9 { grid-area: rightinfo; }
+.item10 { grid-area: articleleft; }
+.item11 { grid-area: articlemiddle; }
+.item12 { grid-area: articleright; }
+.item13 { grid-area: footerleft; }
+.item14 { grid-area: footermiddle; }
+.item15 { grid-area: footerright; }
 
-body {
-  
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-.header {
-  border-style: transparent;
-  grid-area: header;
-  padding: 30px;
-  text-align: center;
-  font-size: 25px;
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-
-    'left middle middle middle right right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-}
-
-
-/* The grid container */
 .grid-container {
-  border-style: transparent;
+  width: 100%;
   display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'left left middle middle right right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-  grid-row-gap: 10px;
-} 
-
-.left,
-.middle,
-.right {
-border-style: transparent   ;
+  grid-template-areas:
+    'headerleft headermiddle headermiddle headermiddle headermiddle headerright'
+    'leftwelcome leftwelcome leftwelcome rightwelcome  rightwelcome rightwelcome'
+    'leftinfo leftinfo rightinfo rightinfo rightinfo rightinfo'
+    'articleleft articleleft articleleft articleleft articleleft articleleft'
+    'footerleft footerleft footerleft footerright footerright footerright';
+  background-color: #ffffff;
+  row-gap: 30px;
+  padding: 30px;
 }
-
-/* Style the left column */
-.left {
-  grid-area: left;
-}
-
-/* Style the middle column */
-.middle {
-  grid-area: middle;
-}
-
-/* Style the right column */
-.right {
-  grid-area: right;
-}
-
-/* Style the footer */
-.footer {
-  border-style: transparent;
-  grid-area: footer;
-  background-color: #BFE4F4;
-  text-align: center;
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'left left middle middle right right' 
-    'footer footer footer footer footer footer';
-    box-shadow: 0 50vh 0 50vh #BFE4F4;
-
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-  grid-row-gap: 10px;
-}
-
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (min-width: 768px) {
-  .grid-container  {
-    grid-template-areas: 
-      'header header header header header header' 
-      'left left left left left left' 
-      'middle middle middle middle middle middle' 
-      'right right right right right right' 
-      'footer footer footer footer footer footer';
+  #mobile{
+    visibility: hidden;
   }
-  .column {
-    width: 100%;}
-}
+  #mobilepicture{
+      max-width: 100%;
+      }
+  #mobilemaps{
+  width: 600px;
+  height: 450px;
+  
+  }
+  #mobilefooter{
+  }
 
-
-
-a:link {
-    color: #060101;
-    font-size: 15px;
-    text-align: left;
-    text-decoration: none;
-}
-a:visited {
-    color: #000000;
-    text-decoration: none;
-}
-a:hover {
-    color: #BFE4F4;
-    text-decoration: none;
-}
-a:active {
-    color: #BFE4F4;
-    text-decoration: none;
-}
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    text-decoration: none;
-    background-color: #49c8ff;
-    border-radius: 50px;
- 
-
-}
-
-h1{
-    align-items: left;
-    font-size: 32px;
-    font-style: normal;
-    text-align: left;
-    padding-left: 30px;
-    padding-top: 20px;
-}
-h2{
-    align-items: left;
-    font-size: 16px;
-    font-style: normal;
-    text-align: left;
-    padding-left: 30px;
+@media only screen and (max-width: 600px) {
     
-}
+    .grid-container{
+      grid-template-areas:
+      'headerleft'
+      'headermiddle'
+      'headerright'
+      'leftwelcome'
+      'rightwelcome'
+      'leftinfo'
+      'rightinfo'
+      'articleleft'
+      'footerleft'
+      'footerright';
+      text-align: center;
+      align-items: center;
+     padding: 0px;
+    }
+   
+    #desktop{
+    display: none;    }
+    #mobile{
+    visibility: visible;  }
+    #mobilepicture{
+    max-width: 75%;
+    }
+    #mobilemaps{
+      width: 300px;
+      height: 225px;
+    }
+    #mobilefooter{
+    box-shadow: none;
+  }
+  } 
 
+
+  a:link {
+  color: #060101;
+  font-size: 15px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  }
+  a:visited {
+  color: #000000;
+  text-decoration: none;
+  }
+  a:hover {
+  color: #BFE4F4;
+  text-decoration: none;
+  }
+  a:active {
+  color: #BFE4F4;
+  text-decoration: none;
+  }
+  a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+
+  background-color: #49c8ff;
+  border-radius: 50px;
+
+  }
+  a.buttonlower{
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  background-color: #49c8ff;
+  border-radius: 50px;
+
+  }
+  h1{
+  font-size: 32px;
+  font-style: normal;
+  text-align: left;
+  padding-left: 30px;
+  padding-top: 20px;
+  }
+  h2{
+  align-items: left;
+  font-size: 16px;
+  font-style: normal;
+  text-align: left;
+  padding-left: 30px;
+  }
   .row:after {
   content: "";
   display: table;
   clear: both;
-}
-
-@import url(https://fonts.googleapis.com/css?family=Offside);
-body {
+  }
+  @import url(https://fonts.googleapis.com/css?family=Offside);
+  * {
+  box-sizing: border-box;
+  }
+  body {
   background: #ffffff;
   font-family: "Offside", Helvetica;
   text-transform: uppercase;
-  padding: 20px;
-}
-
-.container {
-  max-width: 400px;
-  overflow: hidden;
-  -moz-box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
-  -webkit-box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
-  box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
-  margin: 20px auto;
-  background: #eee;
-}
-.container .block {
-  width: 50%;
-  height: 200px;
-  float: left;
-}
-.container .block .small {
-  width: 50%;
-  float: left;
-  height: 100px;
-  display: table;
-  vertical-align: middle;
-  text-align: center;
-  color: white;
-}
-.container .block .small:nth-child(1) {
-  background: #ffffff;
-}
-.container .block .small:nth-child(2) {
-  background: #0064ac;
-}
-.container .block .small:nth-child(3) {
-  background: #0064ac;
-}
-.container .block .small:nth-child(4) {
-  background: #ffffff;
-}
-.container .text {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  color: #BFE4F4;
-  position: relative;
-  z-index: 2;
-}
-.container .item {
-  width: 200px;
-  height: 200px;
-  float: left;
-  display: table;
-  background-size: cover;
-  position: relative;
-  cursor: pointer;
-}
-.container .item:after {
-  background: #315A78;
-  opacity: 0.8;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.container .item:first-child {
-  width: 100%;
-  height: 50px;
-  background: #0064ac;
-}
-.container .item:nth-child(2) {
-  background-image: url("http://cdn4.pitchfork.com/news/49571/021544fb.jpg");
-}
-.container .item:nth-child(5) {
-  background-image: url("https://4.bp.blogspot.com/_9dPtEKC0NW4/Ss7y_zFM4EI/AAAAAAAABaw/CASHQhIKKn8/s400/nirvana_nevermind_album_cover.jpg");
-}
-.container .item:nth-child(6) {
-  background-image: url("http://upload.wikimedia.org/wikipedia/en/b/b5/James_Blake_Cover.jpg");
-}
-.container .item:nth-child(9) {
-  background-image: url("http://aspiringiconicmiscreation.files.wordpress.com/2013/04/peace-album-cover.jpg");
-}
-.container .item:nth-child(12) {
-  background-image: url("http://cdn4.pitchfork.com/news/49571/021544fb.jpg");
-}
-.container .item:nth-child(15) {
-  background-image: url("https://4.bp.blogspot.com/_9dPtEKC0NW4/Ss7y_zFM4EI/AAAAAAAABaw/CASHQhIKKn8/s400/nirvana_nevermind_album_cover.jpg");
-}
-.container .item:nth-child(18) {
-  background-image: url("http://upload.wikimedia.org/wikipedia/en/b/b5/James_Blake_Cover.jpg");
-}
-.container .item:nth-child(21 ) {
-  background-image: url("http://aspiringiconicmiscreation.files.wordpress.com/2013/04/peace-album-cover.jpg");
-}  .news-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-between;
+  } 
+  .news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
   }
 
   .article-container {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    width: 28vw; /* Increase this value if you want more articles per row, decrease if you want less*/
-    min-width: 150px;
-    max-width: 700px;
-    box-shadow: 2px 2px 25px 2px rgba(0,0,0,0.9);
-    margin: 20px;
-    transition: 0.3s;
-    font-size: 14px;
-    font-family: 'Lora', serif;
-    background-color: #ffffff;
-  }
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: 28vw; /* Increase this value if you want more articles per row, decrease if you want less*/
+  min-width: 150px;
+  max-width: 700px;
+  box-shadow: 2px 2px 25px 2px rgba(0,0,0,0.9);
+  margin: 20px;
+  transition: 0.3s;
+  font-size: 14px;
 
+  background-color: #ffffff;
+  }
   @media only screen and (max-width: 850px) {
-    .article-container {
-      width: 90vw;
-    }
+  .article-container {
+  width: 90vw;
   }
 
+  
+  }
   .article-container:hover {
-    transform: scale(1.02);
-    box-shadow: 2px 2px 25px 2px rgba(139, 139, 139, 0.89);
-
+  transform: scale(1.02);
+  box-shadow: 2px 2px 25px 2px rgba(139, 139, 139, 0.89);
   }
-
   .article-image {
-    width: 100%;
-    max-height: 100%;
+  width: 100%;
+  max-height: 100%;
   }
-
   .article-title {
-    padding: 10px;
+  padding: 10px;
   }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+  }
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  }
+  .dropdown:hover .dropdown-content {
+  display: block;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+.menu {
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 40px max-content;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle {
+  text-align: center;
+  align-items: center;
+  all: unset;
+  background-color: dodgerblue;
+  color: white;
+  width: 150px;
+  padding: 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  transform: rotate(45deg);
+  transition: 0.4s;
+}
+
+.list {
+  background-color: white;
+  color: #444;
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(4, 40px);
+  border-radius: 5px;
+  overflow: hidden;
+  height: 0;
+  transition: 0.4s;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.4s, transform 0.4s var(--delay);
+  transform: translateX(-100%);
+  user-select: none;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+.toggle:focus::after {
+  transform: rotate(225deg);
+}
+
+.toggle:focus ~ .list {
+  height: 160px;
+}
+
+.toggle:focus ~ .list .list-item {
+  transform: translateX(0);
+}
+
 </style>
-<head> 
-    <div class="grid-container">
-        <div class="header">
-            <div class ="left">
-                <a href="index.html"> <img src="logga.png" style="max-width: 20%;">  </a>
-            </div>
-            <div class="middle">
-            
-            
-                <a href="index.html2">Om Oss </a>
-                <a href="index.html2">T&auml;vlingar</a>
-                <a href="index.html2">Kanot</a>
-                <a href="index.html2">Ungdomsverksamhet</a> 
-                <a href="index.html2">Lokaler Och Områden</a> 
-            </div>
-            
-            <div class="right">
-            <a href="testibesti.html">Kl&auml;der</a>
-            <a href="nyheter.html">Nyhetsarkiv</a>
-            <a href="#footer" class="button" >&nbsp;Kontakt&nbsp;</a>
-            </div>
-      </div>
-      
 </head>
 <body>
 
-
-  <div class="grid-container">
-    <div class="header">
-      <div class="left" style="background-color: #BFE4F4;">
-
-        <h2></h2>  
-    
-        <img style="scroll-padding-left: 10px;" src="batomoss.jpg">
-
-        <h2></h2>
-    </div>
-      <div class ="middle" style="background-color: #BFE4F4;">
-
-            
-      </div>
-      
-      <div class ="right" style="background-color: #BFE4F4;">
-        <H1>V&auml;lkommen Till <br> Nyn&auml;shamns Segels&auml;llskap <br></H1>
-        <h2>
-          NSS &auml;r en aktiv och betydelsefull akt&ouml;r i  Nyn&auml;shamn med en naturlig och m&aring;ng&aring;rig 
-          verksamhet med inriktning p&aring; sj&ouml;liv, b&aring;tsport, segling och ungdoms- verksamhet.
-          NSS &auml;ger en f&ouml;rn&auml;lig klubbanl&auml;ggning, varv och bryggor vid Fagerviken, m&aring;nga bryggor i
-          Treh&ouml;rningsviken samt klubbholmen Lacka strax norr om Nyn&auml;shamn. 
-                </h2>
-            
-    </div>
+<div class="grid-container">
+  <div class="item1">
+    <a href="index.html"> <img src="files/logga.png" style="max-width: 20%;">  </a>
   </div>
-    <div class="grid-container">
-        <div class="header">
-          <div class="right" style="background-color: #BFE4F4;">
+  <div class="item2"  >
+    <a href="index.html2" id="desktop">Om Oss </a>
+    <a href="index.html2" id="desktop">Tävlingar</a>
+    <a href="index.html2" id="desktop">Kanot</a>
+    <a href="index.html2" id="desktop">Ungdomsverksamhet</a> 
+    <a href="index.html2" id="desktop">Faciliteter</a> 
+    <a href="index.html2" id="desktop">Bli Medlem</a>
+    <a href="index.html2" id="desktop">Veckobrev</a> 
 
-            <h2></h2>  
+   
+      <div class="menu" id="mobile">
         
-            <img style="padding-right: 10px;" src="https://bildix.mmcloud.se/bildix/api/images/kpTnboHCr3OqY3sieb1QTf2sq0k.jpeg?fit=crop&w=980&h=551">
+        <button class="toggle">Topics</button>
+        <ul class="list">
+          <li class="list-item" style="--delay:0.2s">Front-end</li>
+          <li class="list-item" style="--delay:0.4s">Back-end</li>
+          <li class="list-item" style="--delay:0.6s">Full-Stack</li>
+          <li class="list-item" style="--delay:0.8s">@Website_Mentor</li>
+        </ul>
+      </div>
 
-            <h2></h2>
-          </div>
-           
-            <div class ="middle" style="background-color: #BFE4F4;">
-    
-                  
-            </div>
-            <div class ="left" style="background-color: #BFE4F4;">
-              <H1> Senaste styrelsemötet och nya listor <br></H1>
-              <h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean magna eros, laoreet et volutpat id, tristique et neque. Mauris sed sem consectetur, egestas turpis id, consectetur nisi. Morbi iaculis lacus nec lacinia lobortis. Aliquam fermentum varius mauris, ut pellentesque tellus accumsan et. Vivamus auctor cursus sapien, vel interdum augue feugiat at. 
-                      </h2>
-                      <a href="index.html" class="button">&nbsp;Bryggvakt&nbsp;</a>
-                      <a href="index.html" class="button">&nbsp;Isättning&nbsp;</a>
-                      
-                  
-            </div>
-           
-            
-        </div>
-       
-        <div class ="left" style="background-color: #BFE4F4;">
-           <!--Copy this into your website or website generator, in the HTML section.-->
-<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 
-<h1>Nyheter</h1>
-<script>
-  // Add, remove, modify your articles here
-  document.addEventListener("DOMContentLoaded", function() {
-    var articles = [
+  </div>
+  <div class="item3">
+    <a href="https://www.klubbtryck.se/nhss/" id="desktop">Kläder</a>
+    <a href="nyheter.html" id="desktop">Nyhetsarkiv</a>
+    <a href="#footer" class="button" id="desktop">&nbsp;Kontakt&nbsp;</a>
+  </div>  
+  <div class="item4" style="background-color: #BFE4F4;"  >
+  <br>    
+  <img style="padding-left: 30px; padding-bottom: 10px;" id="mobilepicture" src="files/batomoss.jpg">
+  <br>
+  </div>
+  <!--
+  <div class="item5" style="background-color: #BFE4F4;">
+   
+   
+  </div>
+  -->
+  <div class="item6" style="background-color: #BFE4F4;">
+    <H1>V&auml;lkommen Till <br> Nyn&auml;shamns Segels&auml;llskap <br></H1>
+    <h2>
+      NSS &auml;r en aktiv och betydelsefull akt&ouml;r i  Nyn&auml;shamn med en naturlig och m&aring;ng&aring;rig 
+      verksamhet med inriktning p&aring; sj&ouml;liv, b&aring;tsport, segling och ungdoms- verksamhet.
+      NSS &auml;ger en f&ouml;rn&auml;lig klubbanl&auml;ggning, varv och bryggor vid Fagerviken, m&aring;nga bryggor i
+      Treh&ouml;rningsviken samt klubbholmen Lacka strax norr om Nyn&auml;shamn. 
+            </h2>
+  </div>
+  <div class="item7" style="background-color: #BFE4F4;">
+    <H1> Senaste styrelsemötet och nya listor <br></H1>
+    <h2>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean magna eros, laoreet et volutpat id, tristique et neque. Mauris sed sem consectetur, egestas turpis id, consectetur nisi. Morbi iaculis lacus nec lacinia lobortis. Aliquam fermentum varius mauris, ut pellentesque tellus accumsan et. Vivamus auctor cursus sapien, vel interdum augue feugiat at. 
+    </h2>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="index.html" class="button">&nbsp;Bryggvakt&nbsp;</a>
+    <a href="index.html" class="button"">&nbsp;Isättning&nbsp;</a>
+  </div>
+  <!--
+  <div class="item8" style="background-color: #BFE4F4;">MiddleInfo
+  </div>
+  -->  
+  <div class="item9" style="background-color: #BFE4F4;"> 
+   <br>
+        
+   <img src="https://bildix.mmcloud.se/bildix/api/images/kpTnboHCr3OqY3sieb1QTf2sq0k.jpeg?fit=crop&w=980&h=551"id="mobilepicture">
+
+
+  <br>
+  </div>
+  <div class="item10" style="background-color: #BFE4F4;" >
+    <script>
+      // Add, remove, modify your articles here
+      document.addEventListener("DOMContentLoaded", function() {
+        var articles = [
       {
         onClickLink: 'https://www.nynashamnsposten.se/2022-08-18/mullrande-batar-intar-nynashamn--dags-for-nynas-offshore',
         imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/VUrkJLSTuqT5ge8wKLdjN9DYpvQ.jpeg?fit=crop&w=1620&h=911',
@@ -412,61 +412,7 @@ body {
         onClickLink: 'https://www.nynashamnsposten.se/2021-04-29/priset-ar-i-hamn-nss-ar-arets-batklubb--for-oss-handlar-det-inte-bara-om-segling',
         imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/598f73a0-da2c-42a6-9d3e-dd929d7b99d3.jpeg?fit=crop&w=1620&h=911',
         title: 'Priset är i hamn! NSS är Årets båtklubb – ”För oss handlar det inte bara om segling”'
-      }
-    ]
-
-    var rootElement = document.getElementById("imageGalleryWithTitle");
-
-    for (let i=0; i < articles.length; i++) {
-      //Create the container
-      var itemContainer = document.createElement("a");
-      itemContainer.classList.add("article-container");
-      var href = document.createAttribute("href");
-      href.value = articles[i].onClickLink;
-      itemContainer.setAttributeNode(href);
-      var target = document.createAttribute("target");
-      target.value = '_blank';
-      itemContainer.setAttributeNode(target);
-
-      //Create Image
-      var image = document.createElement("img");
-      image.classList.add("article-image");
-      var src = document.createAttribute("src");
-      src.value = articles[i].imgageSource;
-      image.setAttributeNode(src);
-      var alt = document.createAttribute("alt");
-      alt.value = articles[i].title;
-      image.setAttributeNode(alt);
-
-      //Create title
-      var h3 = document.createElement("h3");
-      h3.classList.add("article-title");
-      var h3Text = document.createTextNode(articles[i].title);
-      h3.appendChild(h3Text);
-
-      //Atach image and title to container
-      itemContainer.appendChild(image);
-      itemContainer.appendChild(h3);
-
-      //Attach element to root div
-      rootElement.appendChild(itemContainer);
-    }
-  });
-</script>
-
-<div id='imageGalleryWithTitle' class="news-container"></div>
-        </div>
-
-        <div class ="middle" style="background-color: #BFE4F4;">
-          <!--Copy this into your website or website generator, in the HTML section.-->
-<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-
-
-
-<script>
-  // Add, remove, modify your articles here
-  document.addEventListener("DOMContentLoaded", function() {
-    var articles = [
+      },
       {
         onClickLink: 'https://www.nynashamnsposten.se/2021-02-13/nss-utsedd-till-arets-batklubb-sa-roligt-och-ett-kvitto-pa-att-vi-gor-saker-ratt',
         imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/1ba259d2-51c7-4328-9fa9-fe2b3c68fe3d.jpeg?fit=crop&w=1620&h=911',
@@ -499,71 +445,78 @@ body {
         title: 'Klart: NSS köper granntomten på Strandvägen – sätter punkt för en 14-årig konflikt: ”Känns jätteskönt”'
       }
     ]
+    
+        var rootElement = document.getElementById("imageGalleryWithTitle");
+    
+        for (let i=0; i < articles.length; i++) {
+          //Create the container
+          var itemContainer = document.createElement("a");
+          itemContainer.classList.add("article-container");
+          var href = document.createAttribute("href");
+          href.value = articles[i].onClickLink;
+          itemContainer.setAttributeNode(href);
+          var target = document.createAttribute("target");
+          target.value = '_blank';
+          itemContainer.setAttributeNode(target);
+    
+          //Create Image
+          var image = document.createElement("img");
+          image.classList.add("article-image");
+          var src = document.createAttribute("src");
+          src.value = articles[i].imgageSource;
+          image.setAttributeNode(src);
+          var alt = document.createAttribute("alt");
+          alt.value = articles[i].title;
+          image.setAttributeNode(alt);
+    
+          //Create title
+          var h3 = document.createElement("h3");
+          h3.classList.add("article-title");
+          var h3Text = document.createTextNode(articles[i].title);
+          h3.appendChild(h3Text);
+    
+          //Atach image and title to container
+          itemContainer.appendChild(image);
+          itemContainer.appendChild(h3);
+    
+          //Attach element to root div
+          rootElement.appendChild(itemContainer);
+        }
+      });
+    </script>
+    
+    <div id='imageGalleryWithTitle' class="news-container"></div>
+  </div>
+  <!--
+  <div class="item11" style="background-color: #BFE4F4;">ArticlerMiddle
 
-    var rootElement = document.getElementById("imageGalleryWithTitle");
+  </div>
+  
+  <div class="item12" style="background-color: #BFE4F4;">ArticleRight
 
-    for (let i=0; i < articles.length; i++) {
-      //Create the container
-      var itemContainer = document.createElement("a");
-      itemContainer.classList.add("article-container");
-      var href = document.createAttribute("href");
-      href.value = articles[i].onClickLink;
-      itemContainer.setAttributeNode(href);
-      var target = document.createAttribute("target");
-      target.value = '_blank';
-      itemContainer.setAttributeNode(target);
+  </div>
+  -->
+  <div class="item13" style="background-color: #BFE4F4;" id="mobilefooter">
+    <br> <br> <br> <br> <br> <br> <br>               
+   &nbsp; &nbsp; &nbsp; &nbsp; Öppettider <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+   &nbsp; &nbsp; &nbsp; &nbsp;Kontakta Oss
+  </div>
+  <!--
 
-      //Create Image
-      var image = document.createElement("img");
-      image.classList.add("article-image");
-      var src = document.createAttribute("src");
-      src.value = articles[i].imgageSource;
-      image.setAttributeNode(src);
-      var alt = document.createAttribute("alt");
-      alt.value = articles[i].title;
-      image.setAttributeNode(alt);
+ 
+  <div class="item14" style="background-color: #BFE4F4;">
+  </div> 
+   --> 
+  <div class="item15" style="background-color: #BFE4F4;" id="mobilefooter">
+    <br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.
+    4562557675717!2d17.941270816054566!3d58.89023678150737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
+    4f13.1!3m3!1m2!1s0x465f5ea05a12739b%3A0x95f7354abfef82c7!2sNyn%C3%A4shamns%20Segels%C3%A4llskap!5e0!3m2!1ssv!2sse!4v1674645100008!5m2!1ssv!2sse" 
+    id="mobilemaps" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
 
-      //Create title
-      var h3 = document.createElement("h3");
-      h3.classList.add("article-title");
-      var h3Text = document.createTextNode(articles[i].title);
-      h3.appendChild(h3Text);
-
-      //Atach image and title to container
-      itemContainer.appendChild(image);
-      itemContainer.appendChild(h3);
-
-      //Attach element to root div
-      rootElement.appendChild(itemContainer);
-    }
-  });
-</script>
-
-
-
-        
-   
-        <div id="footer" class="footer">
-          
-          <div class="left" style="background-color: #BFE4F4;">
-                <br> <br> <br> <br> <br> <br> <br>               
-                Öppettider <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-                Kontakta Oss
-          </div>
-          <div class ="middle" style="background-color: #BFE4F4;">
-            
-           <h1></h1>
-                
-          </div>
-          <div class="right" style="background-color: #BFE4F4;">
-            <br>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.
-                4562557675717!2d17.941270816054566!3d58.89023678150737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
-                4f13.1!3m3!1m2!1s0x465f5ea05a12739b%3A0x95f7354abfef82c7!2sNyn%C3%A4shamns%20Segels%C3%A4llskap!5e0!3m2!1ssv!2sse!4v1674645100008!5m2!1ssv!2sse" 
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-    </div>
-</body> 
-
+</body>
 </html>
+
+
