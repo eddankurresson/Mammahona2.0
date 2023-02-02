@@ -1,611 +1,540 @@
 <!DOCTYPE html>
 <html>
-  <meta http-equiv="content-type" content = "text/html" charset = "utf-8"/>
-  <link rel="icon" type="image/x-icon" href="logga.png">
-  <title>NSS</title>
-<head>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-.header {
-  border-style: transparent;
-  grid-area: header;
-  padding: 30px;
-  text-align: center;
-  font-size: 25px;
-  display: grid;
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-}
-
-
-/* The grid container */
-.grid-container {
-  border-style: transparent;
-  display: grid;
-  grid-template-areas: 
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-  grid-row-gap: 10px;
-} 
-/* The grid container */
-.grid-container-head{
-  border-style: transparent;
-  display: grid;
-  grid-template-areas: 
-    'left'
-    'right'
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-  grid-row-gap: 10px;
-} 
-
-
-.left,
-.leftwelcome
-.leftinfo
-.leftfooter 
-.middle,
-.right
-.rightwelcome
-.rightinfo
-.rightfooter {
-border-style: transparent   ;
-}
-
-/* Style the left column */
-.leftwelcome
-.leftinfo
-.leftfooter {
-  grid-area: left;
-}
-
-/* Style the middle column */
-.middle {
-  grid-area: middle;
-}
-
-/* Style the right column */
-.rightwelcome
-.rightinfo
-.rightfooter {
-  grid-area: right;
-}
-
-/* Style the footer */
-.footer {
-  page-break-after: always;
-  border-style: transparent;
-  grid-area: footer;
-  background-color: #BFE4F4;
-  text-align: center;
-  display: grid;
-  box-shadow: 0 50vh 0 50vh #BFE4F4;
-
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-  grid-row-gap: 10px;
-}
-
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (min-width: 1px) {
-  .grid-container {
-  border-style: transparent;
-  display: grid;
-  grid-template-areas: 
-    'leftwelcome' 
-    'rightwelcome'
-    'leftinfo'
-    'rightinfo'
-    'leftfooter'
-    'rightfooter'
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-  grid-row-gap: 10px;
-} 
-  .left
-  .leftwelcome
-  .leftinfo
-  .leftfooter{
-    grid-area: middle;
-  }
-  .right
-  .rightwelcome
-  .rightinfo
-  .rightfooter{
-    grid-area: middle;
-  }
-.column {
-    width: 50%;}
-
-
-a:link {
-    color: #060101;
-    font-size: 15px;
-    text-align: left;
-    text-decoration: none;
-}
-a:visited {
-    color: #000000;
-    text-decoration: none;
-}
-a:hover {
-    color: #BFE4F4;
-    text-decoration: none;
-}
-a:active {
-    color: #BFE4F4;
-    text-decoration: none;
-}
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    text-decoration: none;
-    background-color: #49c8ff;
-    border-radius: 50px;
- 
-
-}
-
-h1{
-    align-items: left;
-    font-size: 32px;
-    font-style: normal;
-    text-align: left;
-    padding-left: 30px;
-    padding-top: 20px;
-}
-h2{
-    align-items: left;
-    font-size: 16px;
-    font-style: normal;
-    text-align: left;
-    padding-left: 30px;
+   <meta http-equiv="content-type" content = "text/html" charset = "utf-8"/>
+   <link rel="icon" type="image/x-icon" href="logga.png">
+   <title>NSS</title>
+   <head>
+      <style>
+         * {
+         box-sizing: border-box;
+         }
+         body {
+         font-family: Arial, Helvetica, sans-serif;
+         }
+         /* Style the header */
+         .header {
+         border-style: transparent;
+         grid-area: header;
+         padding: 30px;
+         text-align: center;
+         font-size: 25px;
+         display: grid;
+         /* grid-column-gap: 10px; - if you want gap between the columns */
+         }
+         /* The grid container */
+         .grid-container {
+         border-style: transparent;
+         display: grid;
+         grid-template-areas: 
+         'header header header header header header' 
+         'left left middle middle right right' 
+         'footer footer footer footer footer footer';
+         /* grid-column-gap: 10px; - if you want gap between the columns */
+         grid-row-gap: 10px;
+         } 
+         /* The grid container */
+         .grid-container-head{
+         border-style: transparent;
+         display: grid;
+         grid-template-areas: 
+         'left'
+         'right'
+         /* grid-column-gap: 10px; - if you want gap between the columns */
+         grid-row-gap: 10px;
+         } 
+         .left,
+         .leftwelcome
+         .leftinfo
+         .leftfooter 
+         .middle,
+         .right
+         .rightwelcome
+         .rightinfo
+         .rightfooter {
+         border-style: transparent   ;
+         }
+         /* Style the left column */
+         .leftwelcome
+         .leftinfo
+         .leftfooter {
+         grid-area: left;
+         }
+         /* Style the middle column */
+         .middle {
+         grid-area: middle;
+         }
+         /* Style the right column */
+         .rightwelcome
+         .rightinfo
+         .rightfooter {
+         grid-area: right;
+         }
+         /* Style the footer */
+         .footer {
+         page-break-after: always;
+         border-style: transparent;
+         grid-area: footer;
+         background-color: #BFE4F4;
+         text-align: center;
+         display: grid;
+         box-shadow: 0 50vh 0 50vh #BFE4F4;
+         /* grid-column-gap: 10px; - if you want gap between the columns */
+         grid-row-gap: 10px;
+         }
+         /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+         @media (max-width: 768px) {
+         .grid-container {
+         border-style: transparent;
+         display: grid;
+         grid-template-areas: 
+         'left'
+         'right'
+         'leftwelcome' 
+         'rightwelcome'
+         'leftinfo'
+         'rightinfo'
+         'leftfooter
+         'rightfooter'
+         /* grid-column-gap: 10px; - if you want gap between the columns */
+         
+         } 
+         .left
+         .leftwelcome
+         .leftinfo
+         .leftfooter{
+         grid-area: middle;
+         }
+         .right
+         .rightwelcome
+         .rightinfo
+         .rightfooter{
+         grid-area: middle;
+         }
+         }
+         .column {
+         width: 50%;}
+         a:link {
+         color: #060101;
+         font-size: 15px;
+         text-align: left;
+         text-decoration: none;
+         }
+         a:visited {
+         color: #000000;
+         text-decoration: none;
+         }
+         a:hover {
+         color: #BFE4F4;
+         text-decoration: none;
+         }
+         a:active {
+         color: #BFE4F4;
+         text-decoration: none;
+         }
+         a.button {
+         -webkit-appearance: button;
+         -moz-appearance: button;
+         appearance: button;
+         text-decoration: none;
+         background-color: #49c8ff;
+         border-radius: 50px;
+         }
+         h1{
+         align-items: left;
+         font-size: 32px;
+         font-style: normal;
+         text-align: left;
+         padding-left: 30px;
+         padding-top: 20px;
+         }
+         h2{
+         align-items: left;
+         font-size: 16px;
+         font-style: normal;
+         text-align: left;
+         padding-left: 30px;
+         }
+         .row:after {
+         content: "";
+         display: table;
+         clear: both;
+         }
+         @import url(https://fonts.googleapis.com/css?family=Offside);
+         body {
+         background: #ffffff;
+         font-family: "Offside", Helvetica;
+         text-transform: uppercase;
+         padding: 20px;
+         }
+         .container {
+         max-width: 400px;
+         overflow: hidden;
+         -moz-box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
+         -webkit-box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
+         box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
+         margin: 20px auto;
+         background: #eee;
+         }
+         .container .block {
+         width: 50%;
+         height: 200px;
+         float: left;
+         }
+         .container .block .small {
+         width: 50%;
+         float: left;
+         height: 100px;
+         display: table;
+         vertical-align: middle;
+         text-align: center;
+         color: white;
+         }
+         .container .block .small:nth-child(1) {
+         background: #ffffff;
+         }
+         .container .block .small:nth-child(2) {
+         background: #0064ac;
+         }
+         .container .block .small:nth-child(3) {
+         background: #0064ac;
+         }
+         .container .block .small:nth-child(4) {
+         background: #ffffff;
+         }
+         .container .text {
+         display: table-cell;
+         vertical-align: middle;
+         text-align: center;
+         color: #BFE4F4;
+         position: relative;
+         z-index: 2;
+         }
+         .container .item {
+         width: 200px;
+         height: 200px;
+         float: left;
+         display: table;
+         background-size: cover;
+         position: relative;
+         cursor: pointer;
+         }
+         .container .item:after {
+         background: #315A78;
+         opacity: 0.8;
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         }
+         .container .item:first-child {
+         width: 100%;
+         height: 50px;
+         background: #0064ac;
+         }
+         .container .item:nth-child(2) {
+         background-image: url("http://cdn4.pitchfork.com/news/49571/021544fb.jpg");
+         }
+         .container .item:nth-child(5) {
+         background-image: url("https://4.bp.blogspot.com/_9dPtEKC0NW4/Ss7y_zFM4EI/AAAAAAAABaw/CASHQhIKKn8/s400/nirvana_nevermind_album_cover.jpg");
+         }
+         .container .item:nth-child(6) {
+         background-image: url("http://upload.wikimedia.org/wikipedia/en/b/b5/James_Blake_Cover.jpg");
+         }
+         .container .item:nth-child(9) {
+         background-image: url("http://aspiringiconicmiscreation.files.wordpress.com/2013/04/peace-album-cover.jpg");
+         }
+         .container .item:nth-child(12) {
+         background-image: url("http://cdn4.pitchfork.com/news/49571/021544fb.jpg");
+         }
+         .container .item:nth-child(15) {
+         background-image: url("https://4.bp.blogspot.com/_9dPtEKC0NW4/Ss7y_zFM4EI/AAAAAAAABaw/CASHQhIKKn8/s400/nirvana_nevermind_album_cover.jpg");
+         }
+         .container .item:nth-child(18) {
+         background-image: url("http://upload.wikimedia.org/wikipedia/en/b/b5/James_Blake_Cover.jpg");
+         }
+         .container .item:nth-child(21 ) {
+         background-image: url("http://aspiringiconicmiscreation.files.wordpress.com/2013/04/peace-album-cover.jpg");
+         }  .news-container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-content: space-between;
+         }
+         .article-container {
+         text-decoration: none;
+         color: black;
+         display: flex;
+         flex-direction: column;
+         width: 28vw; /* Increase this value if you want more articles per row, decrease if you want less*/
+         min-width: 150px;
+         max-width: 700px;
+         box-shadow: 2px 2px 25px 2px rgba(0,0,0,0.9);
+         margin: 20px;
+         transition: 0.3s;
+         font-size: 14px;
+         font-family: 'Lora', serif;
+         background-color: #ffffff;
+         }
+         @media only screen and (max-width: 850px) {
+         .article-container {
+         width: 90vw;
+         }
+         }
+         .article-container:hover {
+         transform: scale(1.02);
+         box-shadow: 2px 2px 25px 2px rgba(139, 139, 139, 0.89);
+         }
+         .article-image {
+         width: 100%;
+         max-height: 100%;
+         }
+         .article-title {
+         padding: 10px;
+         }
+         .dropdown {
+         position: relative;
+         display: inline-block;
+         }
+         .dropdown-content {
+         display: none;
+         position: absolute;
+         background-color: #f9f9f9;
+         min-width: 160px;
+         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         padding: 12px 16px;
+         z-index: 1;
+         }
+         .dropdown:hover .dropdown-content {
+         display: block;
+         }
+      </style>
+      <head>
     
-}
-
-  .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@import url(https://fonts.googleapis.com/css?family=Offside);
-body {
-  background: #ffffff;
-  font-family: "Offside", Helvetica;
-  text-transform: uppercase;
-  padding: 20px;
-}
-
-.container {
-  max-width: 400px;
-  overflow: hidden;
-  -moz-box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
-  -webkit-box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
-  box-shadow: 0 0 30px 5px rgba(34, 63, 84, 0.4);
-  margin: 20px auto;
-  background: #eee;
-}
-.container .block {
-  width: 50%;
-  height: 200px;
-  float: left;
-}
-.container .block .small {
-  width: 50%;
-  float: left;
-  height: 100px;
-  display: table;
-  vertical-align: middle;
-  text-align: center;
-  color: white;
-}
-.container .block .small:nth-child(1) {
-  background: #ffffff;
-}
-.container .block .small:nth-child(2) {
-  background: #0064ac;
-}
-.container .block .small:nth-child(3) {
-  background: #0064ac;
-}
-.container .block .small:nth-child(4) {
-  background: #ffffff;
-}
-.container .text {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  color: #BFE4F4;
-  position: relative;
-  z-index: 2;
-}
-.container .item {
-  width: 200px;
-  height: 200px;
-  float: left;
-  display: table;
-  background-size: cover;
-  position: relative;
-  cursor: pointer;
-}
-.container .item:after {
-  background: #315A78;
-  opacity: 0.8;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.container .item:first-child {
-  width: 100%;
-  height: 50px;
-  background: #0064ac;
-}
-.container .item:nth-child(2) {
-  background-image: url("http://cdn4.pitchfork.com/news/49571/021544fb.jpg");
-}
-.container .item:nth-child(5) {
-  background-image: url("https://4.bp.blogspot.com/_9dPtEKC0NW4/Ss7y_zFM4EI/AAAAAAAABaw/CASHQhIKKn8/s400/nirvana_nevermind_album_cover.jpg");
-}
-.container .item:nth-child(6) {
-  background-image: url("http://upload.wikimedia.org/wikipedia/en/b/b5/James_Blake_Cover.jpg");
-}
-.container .item:nth-child(9) {
-  background-image: url("http://aspiringiconicmiscreation.files.wordpress.com/2013/04/peace-album-cover.jpg");
-}
-.container .item:nth-child(12) {
-  background-image: url("http://cdn4.pitchfork.com/news/49571/021544fb.jpg");
-}
-.container .item:nth-child(15) {
-  background-image: url("https://4.bp.blogspot.com/_9dPtEKC0NW4/Ss7y_zFM4EI/AAAAAAAABaw/CASHQhIKKn8/s400/nirvana_nevermind_album_cover.jpg");
-}
-.container .item:nth-child(18) {
-  background-image: url("http://upload.wikimedia.org/wikipedia/en/b/b5/James_Blake_Cover.jpg");
-}
-.container .item:nth-child(21 ) {
-  background-image: url("http://aspiringiconicmiscreation.files.wordpress.com/2013/04/peace-album-cover.jpg");
-}  .news-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-between;
-  }
-
-  .article-container {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    width: 28vw; /* Increase this value if you want more articles per row, decrease if you want less*/
-    min-width: 150px;
-    max-width: 700px;
-    box-shadow: 2px 2px 25px 2px rgba(0,0,0,0.9);
-    margin: 20px;
-    transition: 0.3s;
-    font-size: 14px;
-    font-family: 'Lora', serif;
-    background-color: #ffffff;
-  }
-
-  @media only screen and (max-width: 850px) {
-    .article-container {
-      width: 90vw;
-    }
-  }
-
-  .article-container:hover {
-    transform: scale(1.02);
-    box-shadow: 2px 2px 25px 2px rgba(139, 139, 139, 0.89);
-
-  }
-
-  .article-image {
-    width: 100%;
-    max-height: 100%;
-  }
-
-  .article-title {
-    padding: 10px;
-  }
-  .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-</style>
-<head> 
-    <div class="grid-container-head">
-            <div class ="left">
-              
-                <a href="index.html"> <img src="logga.png" style="max-width: 20%;">  </a>
-
-           
-
-            </div>
-            
-            <div class="middle" hidden>
-            
-            
-                <a href="index.html2">Om Oss </a>
-                <a href="index.html2">T&auml;vlingar</a>
-                <a href="index.html2">Kanot</a>
-                <a href="index.html2">Ungdomsverksamhet</a> 
-                <a href="index.html2">Lokaler Och Områden</a> 
-
-               
-
-            </div>
-            
-            <div class="right">
-              <div class="dropdown">
-                <span>Mouse over me</span>
-                <div class="dropdown-content">
+   </head>
+   <body>
+      <div class="grid-container">
+        <div class ="left">
+          <a href="index.html"> <img src="logga.png" style="max-width: 20%;">  </a>
+       </div>
+       <div class="middle" hidden>
+          <a href="index.html2">Om Oss </a>
+          <a href="index.html2">T&auml;vlingar</a>
+          <a href="index.html2">Kanot</a>
+          <a href="index.html2">Ungdomsverksamhet</a> 
+          <a href="index.html2">Lokaler Och Områden</a> 
+       </div>
+       <div class="right">
+          <div class="dropdown">
+             <span>Mouse over me</span>
+             <div class="dropdown-content">
                 <p>Hello World!</p>
-                </div>
-              </div>
-            <a href="testibesti.html">Kläder</a>
-            <a href="nyheter.html">Nyhetsarkiv</a>
-            <a href="#footer" class="button" >&nbsp;Kontakt&nbsp;</a>
-      </div>
-    </div>
-      
-</head>
-<body>
-
-
-    <div class="grid-container">
-      <div class="leftwelcome" style="background-color: #BFE4F4;">
-
-        <h2></h2>  
-    
-        <img src="batomoss.jpg">
-
-        <h2></h2>
-      </div>
-
-      <div class ="rightwelcome" style="background-color: #BFE4F4;">
-        <H1>V&auml;lkommen Till <br> Nyn&auml;shamns Segels&auml;llskap <br></H1>
-        <h2>
-          NSS &auml;r en aktiv och betydelsefull akt&ouml;r i  Nyn&auml;shamn med en naturlig och m&aring;ng&aring;rig 
-          verksamhet med inriktning p&aring; sj&ouml;liv, b&aring;tsport, segling och ungdoms- verksamhet.
-          NSS &auml;ger en f&ouml;rn&auml;lig klubbanl&auml;ggning, varv och bryggor vid Fagerviken, m&aring;nga bryggor i
-          Treh&ouml;rningsviken samt klubbholmen Lacka strax norr om Nyn&auml;shamn. 
-                </h2>
-            
-    
-      </div>
-          <div class="rightinfo" style="background-color: #BFE4F4;">
-
-            <h2></h2>  
-        
-            <img src="https://bildix.mmcloud.se/bildix/api/images/kpTnboHCr3OqY3sieb1QTf2sq0k.jpeg?fit=crop&w=980&h=551">
-
+             </div>
+          </div>
+          <a href="testibesti.html">Kläder</a>
+          <a href="nyheter.html">Nyhetsarkiv</a>
+          <a href="#footer" class="button" >&nbsp;Kontakt&nbsp;</a>
+       </div>
+         <div class="leftwelcome" style="background-color: #BFE4F4;">
             <h2></h2>
-          </div>
-           
-            <div class ="leftinfo" style="background-color: #BFE4F4;">
-              <H1> Senaste styrelsemötet och nya listor <br></H1>
-              <h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean magna eros, laoreet et volutpat id, tristique et neque. Mauris sed sem consectetur, egestas turpis id, consectetur nisi. Morbi iaculis lacus nec lacinia lobortis. Aliquam fermentum varius mauris, ut pellentesque tellus accumsan et. Vivamus auctor cursus sapien, vel interdum augue feugiat at. 
-                      </h2>
-                      <a href="index.html" class="button">&nbsp;Bryggvakt&nbsp;</a>
-                      <a href="index.html" class="button">&nbsp;Isättning&nbsp;</a>
-                      
-                  
-            </div>
-           
-            
-       
-        <div class ="left" style="background-color: #BFE4F4;" hidden>
-              <!--Copy this into your website or website generator, in the HTML section.-->
-      <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-
-      <h1>Nyheter</h1>
-        <script>
-        // Add, remove, modify your articles here
-        document.addEventListener("DOMContentLoaded", function() {
-          var articles = [
-            {
-              onClickLink: 'https://www.nynashamnsposten.se/2022-08-18/mullrande-batar-intar-nynashamn--dags-for-nynas-offshore',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/VUrkJLSTuqT5ge8wKLdjN9DYpvQ.jpeg?fit=crop&w=1620&h=911',
-              title: 'Mullrande båtar intar Nynäshamn – dags för Nynäs Offshore'
-            },
-            {
-              onClickLink: 'https://www.nynashamnsposten.se/2022-06-22/alvar-och-nils-fyra-pa-sitt-forsta-jolle-sm--tuff-segling-i-hard-vind',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/4128a8f0-3c4f-4b5f-9252-ce8665973e5c.jpeg?fit=crop&w=1620&h=911',
-              title: 'Alvar och Nils fyra på sitt första jolle-SM – tuff segling i hård vind'
-            },
-            {
-              onClickLink: 'https://www.nynashamnsposten.se/2022-03-26/spadtag-for-nss-nya-varvsomrade--omkring-70-nya-batplatser-till-hosten',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/e9454ead-c701-4d18-b1e1-dba13e02812c.jpeg?fit=crop&w=1620&h=911',
-              title: 'Spadtag för NSS nya varvsområde – omkring 70 nya båtplatser till hösten'
-            },
-            {
-              onClickLink: 'https://www.nynashamnsposten.se/2021-08-09/stora-seglingsnamn-pa-plats-under-starbat-sm',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/be07a189-654f-4423-a6cd-762d8fde8724.jpeg?fit=crop&w=1620&h=911',
-              title: 'Stora seglingsnamn på plats under starbåt-SM'
-            },
-            {
-              onClickLink: 'https://www.nynashamnsposten.se/2021-08-04/starbat-sm-halls-i-nynashamn--20-batar-tavlar',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/e80f7bc7-0e07-4274-9329-c020ca820cf8.jpeg?fit=crop&w=1620&h=911',
-              title: 'Starbåt-SM hålls i Nynäshamn – 20 båtar tävlar'
-            },
-            {
-              onClickLink: 'https://www.nynashamnsposten.se/2021-04-29/priset-ar-i-hamn-nss-ar-arets-batklubb--for-oss-handlar-det-inte-bara-om-segling',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/598f73a0-da2c-42a6-9d3e-dd929d7b99d3.jpeg?fit=crop&w=1620&h=911',
-              title: 'Priset är i hamn! NSS är Årets båtklubb – ”För oss handlar det inte bara om segling”'
-            }
-          ]
-
-          var rootElement = document.getElementById("imageGalleryWithTitle");
-
-          for (let i=0; i < articles.length; i++) {
-            //Create the container
-            var itemContainer = document.createElement("a");
-            itemContainer.classList.add("article-container");
-            var href = document.createAttribute("href");
-            href.value = articles[i].onClickLink;
-            itemContainer.setAttributeNode(href);
-            var target = document.createAttribute("target");
-            target.value = '_blank';
-            itemContainer.setAttributeNode(target);
-
-            //Create Image
-            var image = document.createElement("img");
-            image.classList.add("article-image");
-            var src = document.createAttribute("src");
-            src.value = articles[i].imgageSource;
-            image.setAttributeNode(src);
-            var alt = document.createAttribute("alt");
-            alt.value = articles[i].title;
-            image.setAttributeNode(alt);
-
-            //Create title
-            var h3 = document.createElement("h3");
-            h3.classList.add("article-title");
-            var h3Text = document.createTextNode(articles[i].title);
-            h3.appendChild(h3Text);
-
-            //Atach image and title to container
-            itemContainer.appendChild(image);
-            itemContainer.appendChild(h3);
-
-            //Attach element to root div
-            rootElement.appendChild(itemContainer);
-          }
-        });
-      </script>
-
-      <div id='imageGalleryWithTitle' class="news-container"></div>
-              </div>
-
-              <div class ="middle" style="background-color: #BFE4F4;" hidden>
-                <!--Copy this into your website or website generator, in the HTML section.-->
-      <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-
-
-
-      <script>
-        // Add, remove, modify your articles here
-        document.addEventListener("DOMContentLoaded", function() {
-          var articles = [
-            {
-              onClickLink: 'https://www.nynashamnsposten.se/2021-02-13/nss-utsedd-till-arets-batklubb-sa-roligt-och-ett-kvitto-pa-att-vi-gor-saker-ratt',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/1ba259d2-51c7-4328-9fa9-fe2b3c68fe3d.jpeg?fit=crop&w=1620&h=911',
-              title: 'NSS utsedd till Årets Båtklubb: ”Så roligt och ett kvitto på att vi gör saker rätt”'
-            },
-            {
-            
-              onClickLink: 'https://www.nynashamnsposten.se/2020-08-15/coronaviruset-slog-ut-de-stora-evenemangen--men-arrangorerna-laddar-for-comeback-en-tragedi-hur-det-blivit',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/2eb431e5-7efa-4d11-9c85-bc5f682f6e3b.png?fit=crop&w=1620&h=911',
-              title: 'Coronaviruset slog ut de stora evenemangen – men arrangörerna laddar för comeback: ”En tragedi hur det blivit'
-            },
-            {
-              onClickLink: 'https://www.nynashamnsposten.se/2020-07-28/julia-och-hanna-os-laddar-i-nynashamn-jattebra-vindar--exakt-som-i-japan',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/7c15ae4e-1f28-4941-93aa-9ebd113eca8b.png?fit=crop&w=1620&h=911',
-              title: 'Julia och Hanna OS-laddar i Nynäshamn: ”Jättebra vindar – exakt som i Japan”'
-            },
-            {
-              onClickLink: 'https://www.nynashamnsposten.se/2020-02-16/saltstankta-bonan-may-95-om-tuffa-seglingar-och-jamlikhet-pa-sjon-vi-tog-alltid-rodret-varannan-gang',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/6c86e7cb-ac83-43a0-a73f-8f8e720bf686.jpeg?fit=crop&w=1620&h=911',
-              title: 'Saltstänkta bönan May, 95, om tuffa seglingar och jämlikhet på sjön: ”Vi tog alltid rodret varannan gång”'
-            },
-            {
-              onClickLink: 'https://www.nynashamnsposten.se/2020-06-29/traning-och-lek-under-en-fartfylld-vecka-pa-vattnet-ett-bra-satt-att-lara-sig-en-ny-sport',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/16a4647a-25aa-43c9-adca-28377f95e8b0.png?fit=crop&w=1620&h=911',
-              title: 'Träning och lek under en fartfylld vecka på vattnet: ”Ett bra sätt att lära sig en ny sport”'
-            },
-            {
-              onClickLink: 'https://www.nynashamnsposten.se/2020-03-28/klart-nss-koper-granntomten-pa-strandvagen--satter-punkt-for-en-14-arig-konflikt-kanns-jatteskont',
-              imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/99a22c20-5c1c-4add-83a6-ef195ae4ebf4.png?fit=crop&w=1620&h=911',
-              title: 'Klart: NSS köper granntomten på Strandvägen – sätter punkt för en 14-årig konflikt: ”Känns jätteskönt”'
-            }
-          ]
-
-          var rootElement = document.getElementById("imageGalleryWithTitle");
-
-          for (let i=0; i < articles.length; i++) {
-            //Create the container
-            var itemContainer = document.createElement("a");
-            itemContainer.classList.add("article-container");
-            var href = document.createAttribute("href");
-            href.value = articles[i].onClickLink;
-            itemContainer.setAttributeNode(href);
-            var target = document.createAttribute("target");
-            target.value = '_blank';
-            itemContainer.setAttributeNode(target);
-
-            //Create Image
-            var image = document.createElement("img");
-            image.classList.add("article-image");
-            var src = document.createAttribute("src");
-            src.value = articles[i].imgageSource;
-            image.setAttributeNode(src);
-            var alt = document.createAttribute("alt");
-            alt.value = articles[i].title;
-            image.setAttributeNode(alt);
-
-            //Create title
-            var h3 = document.createElement("h3");
-            h3.classList.add("article-title");
-            var h3Text = document.createTextNode(articles[i].title);
-            h3.appendChild(h3Text);
-
-            //Atach image and title to container
-            itemContainer.appendChild(image);
-            itemContainer.appendChild(h3);
-
-            //Attach element to root div
-            rootElement.appendChild(itemContainer);
-          }
-        });
-      </script>
-
-
-
-        
-          
-          <div class="leftfooter" style="background-color: #BFE4F4;">
-                <br> <br> <br> <br> <br> <br> <br>               
-                Öppettider <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-                Kontakta Oss
-          </div>
-          <div class ="middle" style="background-color: #BFE4F4;" hidden>
-            
-           <h1></h1>
+            <img src="batomoss.jpg">
+            <h2></h2>
+         </div>
+         <div class ="rightwelcome" style="background-color: #BFE4F4;">
+            <H1>V&auml;lkommen Till <br> Nyn&auml;shamns Segels&auml;llskap <br></H1>
+            <h2>
+               NSS &auml;r en aktiv och betydelsefull akt&ouml;r i  Nyn&auml;shamn med en naturlig och m&aring;ng&aring;rig 
+               verksamhet med inriktning p&aring; sj&ouml;liv, b&aring;tsport, segling och ungdoms- verksamhet.
+               NSS &auml;ger en f&ouml;rn&auml;lig klubbanl&auml;ggning, varv och bryggor vid Fagerviken, m&aring;nga bryggor i
+               Treh&ouml;rningsviken samt klubbholmen Lacka strax norr om Nyn&auml;shamn. 
+            </h2>
+         </div>
+         <div class="rightinfo" style="background-color: #BFE4F4;">
+            <h2></h2>
+            <img src="https://bildix.mmcloud.se/bildix/api/images/kpTnboHCr3OqY3sieb1QTf2sq0k.jpeg?fit=crop&w=980&h=551">
+            <h2></h2>
+         </div>
+         <div class ="leftinfo" style="background-color: #BFE4F4;">
+            <H1> Senaste styrelsemötet och nya listor <br></H1>
+            <h2>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean magna eros, laoreet et volutpat id, tristique et neque. Mauris sed sem consectetur, egestas turpis id, consectetur nisi. Morbi iaculis lacus nec lacinia lobortis. Aliquam fermentum varius mauris, ut pellentesque tellus accumsan et. Vivamus auctor cursus sapien, vel interdum augue feugiat at. 
+            </h2>
+            <a href="index.html" class="button">&nbsp;Bryggvakt&nbsp;</a>
+            <a href="index.html" class="button">&nbsp;Isättning&nbsp;</a>
+         </div>
+         <div class ="left" style="background-color: #BFE4F4;" hidden>
+            <!--Copy this into your website or website generator, in the HTML section.-->
+            <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+            <h1>Nyheter</h1>
+            <script>
+               // Add, remove, modify your articles here
+               document.addEventListener("DOMContentLoaded", function() {
+                 var articles = [
+                   {
+                     onClickLink: 'https://www.nynashamnsposten.se/2022-08-18/mullrande-batar-intar-nynashamn--dags-for-nynas-offshore',
+                     imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/VUrkJLSTuqT5ge8wKLdjN9DYpvQ.jpeg?fit=crop&w=1620&h=911',
+                     title: 'Mullrande båtar intar Nynäshamn – dags för Nynäs Offshore'
+                   },
+                   {
+                     onClickLink: 'https://www.nynashamnsposten.se/2022-06-22/alvar-och-nils-fyra-pa-sitt-forsta-jolle-sm--tuff-segling-i-hard-vind',
+                     imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/4128a8f0-3c4f-4b5f-9252-ce8665973e5c.jpeg?fit=crop&w=1620&h=911',
+                     title: 'Alvar och Nils fyra på sitt första jolle-SM – tuff segling i hård vind'
+                   },
+                   {
+                     onClickLink: 'https://www.nynashamnsposten.se/2022-03-26/spadtag-for-nss-nya-varvsomrade--omkring-70-nya-batplatser-till-hosten',
+                     imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/e9454ead-c701-4d18-b1e1-dba13e02812c.jpeg?fit=crop&w=1620&h=911',
+                     title: 'Spadtag för NSS nya varvsområde – omkring 70 nya båtplatser till hösten'
+                   },
+                   {
+                     onClickLink: 'https://www.nynashamnsposten.se/2021-08-09/stora-seglingsnamn-pa-plats-under-starbat-sm',
+                     imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/be07a189-654f-4423-a6cd-762d8fde8724.jpeg?fit=crop&w=1620&h=911',
+                     title: 'Stora seglingsnamn på plats under starbåt-SM'
+                   },
+                   {
+                     onClickLink: 'https://www.nynashamnsposten.se/2021-08-04/starbat-sm-halls-i-nynashamn--20-batar-tavlar',
+                     imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/e80f7bc7-0e07-4274-9329-c020ca820cf8.jpeg?fit=crop&w=1620&h=911',
+                     title: 'Starbåt-SM hålls i Nynäshamn – 20 båtar tävlar'
+                   },
+                   {
+                     onClickLink: 'https://www.nynashamnsposten.se/2021-04-29/priset-ar-i-hamn-nss-ar-arets-batklubb--for-oss-handlar-det-inte-bara-om-segling',
+                     imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/598f73a0-da2c-42a6-9d3e-dd929d7b99d3.jpeg?fit=crop&w=1620&h=911',
+                     title: 'Priset är i hamn! NSS är Årets båtklubb – ”För oss handlar det inte bara om segling”'
+                   }
+                 ]
+               
+                 var rootElement = document.getElementById("imageGalleryWithTitle");
+               
+                 for (let i=0; i < articles.length; i++) {
+                   //Create the container
+                   var itemContainer = document.createElement("a");
+                   itemContainer.classList.add("article-container");
+                   var href = document.createAttribute("href");
+                   href.value = articles[i].onClickLink;
+                   itemContainer.setAttributeNode(href);
+                   var target = document.createAttribute("target");
+                   target.value = '_blank';
+                   itemContainer.setAttributeNode(target);
+               
+                   //Create Image
+                   var image = document.createElement("img");
+                   image.classList.add("article-image");
+                   var src = document.createAttribute("src");
+                   src.value = articles[i].imgageSource;
+                   image.setAttributeNode(src);
+                   var alt = document.createAttribute("alt");
+                   alt.value = articles[i].title;
+                   image.setAttributeNode(alt);
+               
+                   //Create title
+                   var h3 = document.createElement("h3");
+                   h3.classList.add("article-title");
+                   var h3Text = document.createTextNode(articles[i].title);
+                   h3.appendChild(h3Text);
+               
+                   //Atach image and title to container
+                   itemContainer.appendChild(image);
+                   itemContainer.appendChild(h3);
+               
+                   //Attach element to root div
+                   rootElement.appendChild(itemContainer);
+                 }
+               });
+            </script>
+         </div>
+         <div class ="middle" style="background-color: #BFE4F4;" hidden>
+            <div id='imageGalleryWithTitle' class="news-container"></div>
+         </div>
+         <div class ="right">
+         <!--Copy this into your website or website generator, in the HTML section.-->
+         <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+         <script>
+            // Add, remove, modify your articles here
+            document.addEventListener("DOMContentLoaded", function() {
+              var articles = [
+                {
+                  onClickLink: 'https://www.nynashamnsposten.se/2021-02-13/nss-utsedd-till-arets-batklubb-sa-roligt-och-ett-kvitto-pa-att-vi-gor-saker-ratt',
+                  imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/1ba259d2-51c7-4328-9fa9-fe2b3c68fe3d.jpeg?fit=crop&w=1620&h=911',
+                  title: 'NSS utsedd till Årets Båtklubb: ”Så roligt och ett kvitto på att vi gör saker rätt”'
+                },
+                {
                 
-          </div>
-          <div class="rightfooter" style="background-color: #BFE4F4;">
-            <br>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.
-                4562557675717!2d17.941270816054566!3d58.89023678150737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
-                4f13.1!3m3!1m2!1s0x465f5ea05a12739b%3A0x95f7354abfef82c7!2sNyn%C3%A4shamns%20Segels%C3%A4llskap!5e0!3m2!1ssv!2sse!4v1674645100008!5m2!1ssv!2sse" 
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>  
-
+                  onClickLink: 'https://www.nynashamnsposten.se/2020-08-15/coronaviruset-slog-ut-de-stora-evenemangen--men-arrangorerna-laddar-for-comeback-en-tragedi-hur-det-blivit',
+                  imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/2eb431e5-7efa-4d11-9c85-bc5f682f6e3b.png?fit=crop&w=1620&h=911',
+                  title: 'Coronaviruset slog ut de stora evenemangen – men arrangörerna laddar för comeback: ”En tragedi hur det blivit'
+                },
+                {
+                  onClickLink: 'https://www.nynashamnsposten.se/2020-07-28/julia-och-hanna-os-laddar-i-nynashamn-jattebra-vindar--exakt-som-i-japan',
+                  imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/7c15ae4e-1f28-4941-93aa-9ebd113eca8b.png?fit=crop&w=1620&h=911',
+                  title: 'Julia och Hanna OS-laddar i Nynäshamn: ”Jättebra vindar – exakt som i Japan”'
+                },
+                {
+                  onClickLink: 'https://www.nynashamnsposten.se/2020-02-16/saltstankta-bonan-may-95-om-tuffa-seglingar-och-jamlikhet-pa-sjon-vi-tog-alltid-rodret-varannan-gang',
+                  imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/6c86e7cb-ac83-43a0-a73f-8f8e720bf686.jpeg?fit=crop&w=1620&h=911',
+                  title: 'Saltstänkta bönan May, 95, om tuffa seglingar och jämlikhet på sjön: ”Vi tog alltid rodret varannan gång”'
+                },
+                {
+                  onClickLink: 'https://www.nynashamnsposten.se/2020-06-29/traning-och-lek-under-en-fartfylld-vecka-pa-vattnet-ett-bra-satt-att-lara-sig-en-ny-sport',
+                  imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/16a4647a-25aa-43c9-adca-28377f95e8b0.png?fit=crop&w=1620&h=911',
+                  title: 'Träning och lek under en fartfylld vecka på vattnet: ”Ett bra sätt att lära sig en ny sport”'
+                },
+                {
+                  onClickLink: 'https://www.nynashamnsposten.se/2020-03-28/klart-nss-koper-granntomten-pa-strandvagen--satter-punkt-for-en-14-arig-konflikt-kanns-jatteskont',
+                  imgageSource: 'https://bildix.mmcloud.se/bildix/api/images/99a22c20-5c1c-4add-83a6-ef195ae4ebf4.png?fit=crop&w=1620&h=911',
+                  title: 'Klart: NSS köper granntomten på Strandvägen – sätter punkt för en 14-årig konflikt: ”Känns jätteskönt”'
+                }
+              ]
+            
+              var rootElement = document.getElementById("imageGalleryWithTitle");
+            
+              for (let i=0; i < articles.length; i++) {
+                //Create the container
+                var itemContainer = document.createElement("a");
+                itemContainer.classList.add("article-container");
+                var href = document.createAttribute("href");
+                href.value = articles[i].onClickLink;
+                itemContainer.setAttributeNode(href);
+                var target = document.createAttribute("target");
+                target.value = '_blank';
+                itemContainer.setAttributeNode(target);
+            
+                //Create Image
+                var image = document.createElement("img");
+                image.classList.add("article-image");
+                var src = document.createAttribute("src");
+                src.value = articles[i].imgageSource;
+                image.setAttributeNode(src);
+                var alt = document.createAttribute("alt");
+                alt.value = articles[i].title;
+                image.setAttributeNode(alt);
+            
+                //Create title
+                var h3 = document.createElement("h3");
+                h3.classList.add("article-title");
+                var h3Text = document.createTextNode(articles[i].title);
+                h3.appendChild(h3Text);
+            
+                //Atach image and title to container
+                itemContainer.appendChild(image);
+                itemContainer.appendChild(h3);
+            
+                //Attach element to root div
+                rootElement.appendChild(itemContainer);
+              }
+            });
+         </script>
+      </div>
+      <div class="leftfooter" style="background-color: #BFE4F4;">
+         <br> <br> <br> <br> <br> <br> <br>               
+         Öppettider <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+         Kontakta Oss
+      </div>
+      <div class="rightfooter" style="background-color: #BFE4F4;">
+         <br>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.
+            4562557675717!2d17.941270816054566!3d58.89023678150737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
+            4f13.1!3m3!1m2!1s0x465f5ea05a12739b%3A0x95f7354abfef82c7!2sNyn%C3%A4shamns%20Segels%C3%A4llskap!5e0!3m2!1ssv!2sse!4v1674645100008!5m2!1ssv!2sse" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
-</body> 
-
+   </body>
 </html>
