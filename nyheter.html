@@ -10,7 +10,7 @@
 }
 
 body {
-    
+
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -77,6 +77,8 @@ padding: 10pX;
     'footer footer footer footer footer footer';
   /* grid-column-gap: 10px; - if you want gap between the columns */
   grid-row-gap: 10px;
+  box-shadow: 0 50vh 0 50vh #BFE4F4;
+
 }
 
 
@@ -313,7 +315,13 @@ body {
 </head>
 <body>
   <div class ="left" style="background-color: #BFE4F4;">
-    <!--Copy this into your website or website generator, in the HTML section.-->
+    <video width="320" height="240" controls>
+      <source src="movie.mp4" type="video/mp4">
+    </video>
+  </div>  
+
+ <div class="right" style="background-color: #BFE4F4;">
+     <!--Copy this into your website or website generator, in the HTML section.-->
 <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 
 <h1>Nyheter</h1>
@@ -478,11 +486,7 @@ rootElement.appendChild(itemContainer);
 </script>
 
 <div id='imageGalleryWithTitle' class="news-container"></div>
-         
- </div>
-
- <div class="right" style="background-color: #BFE4F4;">
-   
+       
        
  </div>
 
