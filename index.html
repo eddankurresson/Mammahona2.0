@@ -258,7 +258,7 @@ html {
   border-width: 0 3px 3px 0;
   border-style: solid;
   transform: rotate(45deg);
-  transition: 0.4s;
+  transition: 1s;
 }
 
 .list {
@@ -270,14 +270,14 @@ html {
   border-radius: 5px;
   overflow: hidden;
   height: 0;
-  transition: 0.4s;
+  transition: 1s;
 }
 
 .list-item {
   display: flex;
   align-items: center;
   padding-left: 10px;
-  transition: 0.4s, transform 0.4s var(--delay);
+  transition: 1s, transform 1s var(--delay);
   transform: translateX(-100%);
   user-select: none;
   cursor: pointer;
@@ -293,7 +293,7 @@ html {
 }
 
 .toggle:focus ~ .list {
-  height: 160px;
+  height: 200px;
 }
 
 .toggle:focus ~ .list .list-item {
@@ -314,19 +314,42 @@ html {
     <a href="kanot.html" id="desktop">Kanot</a>
     <a href="undgomsverksamhet.html" id="desktop">Ungdomsverksamhet</a> 
     <a href="faciliteter.html" id="desktop">Faciliteter</a> 
-    <a href="blimedlem.html2" id="desktop">Bli Medlem</a>
-    <a href="veckobrev.html2" id="desktop">Veckobrev</a> 
+    <a href="blimedlem.html" id="desktop">Bli Medlem</a>
+    <a href="veckobrev.html" id="desktop">Veckobrev</a> 
 
    
       <div class="menu" id="mobile">
         
-        <button class="toggle">Topics</button>
+        <button class="toggle">Meny</button>
         <ul class="list">
-          <li class="list-item" style="--delay:0.2s">Front-end</li>
-          <li class="list-item" style="--delay:0.4s">Back-end</li>
-          <li class="list-item" style="--delay:0.6s">Full-Stack</li>
-          <li class="list-item" style="--delay:0.8s">@Website_Mentor</li>
+          <li class="list-item"><a href="omoss.html">Om Oss </a></li>
+          <li class="list-item"><a href="tavlingar.html">Tävlingar</a></li>
+          <li class="list-item"><a href="kanot.html">Kanot</a></li>
+          <li class="list-item"><a href="undgomsverksamhet.html">Ungdomsverksamhet</a> </li>
+          <li class="list-item"><a href="faciliteter.html">Faciliteter</a> </li>
+          <li class="list-item"><a href="blimedlem.html"">Bli Medlem</a></li>
+          <li class="list-item""><a href="veckobrev.html"">Veckobrev</a> </li>
+          <li class="list-item"><a href="https://www.klubbtryck.se/nhss/">Kläder</a></li>
+          <li class="list-item"><a href="nyheter.html">Nyhetsarkiv</a></li>
+          <li class="list-item" > <a href="#mobilemaps">Kontakt</a></li>
+          
         </ul>
+        <script>
+          var coll = document.getElementsByClassName("toggle");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+          </script>
       </div>
 
 
