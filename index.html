@@ -6,8 +6,8 @@
 <html>
 <head>
 <style>
-.item1 { grid-area: headerleft; }
-.item2 { grid-area: headermiddle; }
+.item1 { grid-area: headerleft; padding-left: 100px;}
+.item2 { grid-area: headermiddle; justify-content: center; text-align: center;}
 .item3 { grid-area: headerright; }
 .item4 { grid-area: leftwelcome;}
 .item5 { grid-area: middlewelcome; }
@@ -49,8 +49,10 @@
   #mobilefooter{
   }
 
-@media only screen and (max-width: 600px) {
-    
+@media only screen and (max-width: 850px) {
+    .item1{
+      padding-left: 0px;
+    }
     .grid-container{
       grid-template-areas:
       'headerleft'
@@ -67,6 +69,8 @@
       align-items: center;
      padding: 0px;
     }
+    
+    
    
     #desktop{
     display: none;    }
