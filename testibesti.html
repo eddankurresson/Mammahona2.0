@@ -43,6 +43,7 @@
       grid-template-areas:
       'headerleft'
       'headermiddle'
+      'headerright'
       'leftwelcome'
       'rightwelcome'
       'leftinfo'
@@ -51,6 +52,9 @@
       'footerleft'
       'footerright';
     }
+    #mobile{
+
+  display: none;    }
   
   }
 
@@ -174,7 +178,7 @@
   <div class="item1">
     <a href="index.html"> <img src="logga.png" style="max-width: 20%;">  </a>
   </div>
-  <div class="item2">
+  <div class="item2" id="mobile">
     <a href="index.html2">Om Oss </a>
     <a href="index.html2">T&auml;vlingar</a>
     <a href="index.html2">Kanot</a>
@@ -184,20 +188,22 @@
     <a href="index.html2">Veckobrev</a> 
 
   </div>
-  <div class="item3">
+  <div class="item3" id="mobile">
     <a href="testibesti.html">Kl&auml;der</a>
     <a href="nyheter.html">Nyhetsarkiv</a>
     <a href="#footer" class="button" >&nbsp;Kontakt&nbsp;</a>
   </div>  
   <div class="item4" style="background-color: #BFE4F4;"  >
   <br>    
-  <img style="padding-left: 30px; padding-bottom: 10px;" src="batomoss.jpg">
+  <img style="padding-left: 30px; padding-bottom: 10px; max-width: 100%;" src="batomoss.jpg">
   <br>
   </div>
+  <!--
   <div class="item5" style="background-color: #BFE4F4;">
    
    
   </div>
+  -->
   <div class="item6" style="background-color: #BFE4F4;">
     <H1>V&auml;lkommen Till <br> Nyn&auml;shamns Segels&auml;llskap <br></H1>
     <h2>
@@ -222,7 +228,7 @@
   <div class="item9" style="background-color: #BFE4F4;"> 
    <br>
         
-   <img src="https://bildix.mmcloud.se/bildix/api/images/kpTnboHCr3OqY3sieb1QTf2sq0k.jpeg?fit=crop&w=980&h=551"style="width:100%">
+   <img src="https://bildix.mmcloud.se/bildix/api/images/kpTnboHCr3OqY3sieb1QTf2sq0k.jpeg?fit=crop&w=980&h=551"style="max-width:100%">
 
 
   <br>
@@ -350,8 +356,12 @@
     Öppettider <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
     Kontakta Oss
   </div>
+  <!--
+
+ 
   <div class="item14" style="background-color: #BFE4F4;">
-  </div>  
+  </div> 
+   --> 
   <div class="item15" style="background-color: #BFE4F4;">
     <br>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.
