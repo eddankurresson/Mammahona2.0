@@ -34,6 +34,9 @@
   background-color: #ffffff;
   row-gap: 30px;
 }
+#mobile{
+  visibility: hidden;
+}
 @media only screen and (max-width: 600px) {
     
     .grid-container{
@@ -53,12 +56,12 @@
      
     }
    
+    #desktop{
+    display: none;    }
     #mobile{
+    visibility: visible;  }
+    } 
 
-  display: none;    }
-  
-  
-  }
 
   a:link {
   color: #060101;
@@ -210,6 +213,8 @@ html {
 }
 
 .toggle {
+  text-align: center;
+  align-items: center;
   all: unset;
   background-color: dodgerblue;
   color: white;
@@ -281,16 +286,17 @@ html {
     <a href="index.html"> <img src="logga.png" style="max-width: 20%;">  </a>
   </div>
   <div class="item2">
-    <a href="index.html2" id="mobile">Om Oss </a>
-    <a href="index.html2" id="mobile">T&auml;vlingar</a>
-    <a href="index.html2" id="mobile">Kanot</a>
-    <a href="index.html2" id="mobile">Ungdomsverksamhet</a> 
-    <a href="index.html2" id="mobile">Faciliteter</a> 
-    <a href="index.html2" id="mobile">Bli Medlem</a>
-    <a href="index.html2" id="mobile">Veckobrev</a> 
+    <a href="index.html2" id="desktop">Om Oss </a>
+    <a href="index.html2" id="desktop">T&auml;vlingar</a>
+    <a href="index.html2" id="desktop">Kanot</a>
+    <a href="index.html2" id="desktop">Ungdomsverksamhet</a> 
+    <a href="index.html2" id="desktop">Faciliteter</a> 
+    <a href="index.html2" id="desktop">Bli Medlem</a>
+    <a href="index.html2" id="desktop">Veckobrev</a> 
 
    
-      <div class="menu">
+      <div class="menu" id="mobile">
+        
         <button class="toggle">Topics</button>
         <ul class="list">
           <li class="list-item" style="--delay:0.2s">Front-end</li>
@@ -303,9 +309,9 @@ html {
 
   </div>
   <div class="item3">
-    <a href="testibesti.html" id="mobile">Kl&auml;der</a>
-    <a href="nyheter.html" id="mobile">Nyhetsarkiv</a>
-    <a href="#footer" class="button" id="mobile">&nbsp;Kontakt&nbsp;</a>
+    <a href="testibesti.html" id="desktop">Kl&auml;der</a>
+    <a href="nyheter.html" id="desktop">Nyhetsarkiv</a>
+    <a href="#footer" class="button" id="desktop">&nbsp;Kontakt&nbsp;</a>
   </div>  
   <div class="item4" style="background-color: #BFE4F4;"  >
   <br>    
