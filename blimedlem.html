@@ -8,6 +8,37 @@
 <head>
 
 </head>
+<style>
+  .grid-container{
+    grid-template-areas: 
+    'headerleft headermiddle headermiddle headermiddle headermiddle headerright'
+    'leftwelcome leftwelcome leftwelcome rightwelcome rightwelcome rightwelcome'
+    'rightinfo rightinfo rightinfo rightinfo rightinfo rightinfo'
+    'articleleft articleleft articleleft articleleft articleleft articleleft'
+    'footerleft footerleft footerleft footerright footerright footerright';;
+  }
+  @media only screen and (max-width: 850px) {
+        .item1{
+          padding-left: 0px;
+        }
+        .grid-container{
+          grid-template-areas:
+          'headerleft'
+          'headermiddle'
+          'headerright'
+          'leftwelcome'
+          'rightwelcome'
+          'leftinfo'
+          'rightinfo'
+          'articleleft'
+          'footerleft'
+          'footerright';
+          text-align: center;
+          align-items: center;
+         padding: 0px;
+        }
+    }
+</style>
 <body>
 
 <div class="grid-container">
@@ -51,45 +82,43 @@
   <img style="padding-left: 30px; padding-bottom: 10px;" id="mobilepicture" src="files/blimedlem.png">
   <br>
   </div>
-  <!--
-  <div class="item5" style="background-color: #BFE4F4;">
-   
-   
-  </div>
-  -->
+  
   <div class="item6" style="background-color: #BFE4F4;">
-    <br>
-    <H1>Nu är årets lägeranmälningar öppna! </H1>
-    <h2> <br> <br>
-      Dagläger 1 – vecka 24, mån 13 juni – fre 17 juni. <br>
+   <h1>Fyll i formuläret nedanför om du vill bli medlem.</h1>
+   <br>
+   <h2>Vi kommer höra av oss senare och höra av oss om betalning och sådant och då kan vi eventuellt lösa sådant som båtplats.</h2>
+  </div>
 
-      Dagläger 2 – vecka 26, mån 27 juni – fre 1 juli. <br>
-      
-      Dagläger 3 – vecka 31, mån 1 augusti – fre 5 augusti. <br>
-      
-      Dagläger 4 – vecka 32, mån 8 augusti – fre 12 augusti. <br>
-      
-      Tid: 09.00 – 16.00 <br> <br>
-      
-      Avgift: 2.600 kr, andra lägret samma år 1.300 kr. 
-            </h2>
-            &nbsp; &nbsp; &nbsp;
-            <a href="https://simplesignup.se/" class="button" target="_blank">&nbsp;Anmälan&nbsp;</a>
-  </div>
-  <div class="item7" style="background-color: #BFE4F4;">
-    <H1> Knopskola <br></H1>
-    <h2>
-      Vi tycker att det kan vara ganska bra att lära sig några knopar innan lägret. <br>
-      Om du har tid rekommenderar vi skarpt den här videon.
-    </h2>
-  </div>
+  
+       
+         
+
   <!--
   <div class="item8" style="background-color: #BFE4F4;">MiddleInfo
   </div>
   -->  
   <div class="item9" style="background-color: #BFE4F4;"> 
    <br>
-  <iframe id="desktopvideo;" src="files/knopar.mp4">
+   <form style="justify-content: center; align-items: center; text-align: center;"> 
+    <label for="fname">Förnamn:</label> <br><br>
+    <input type="text" id="fnamn" name="fnamn"><br><br>
+    <label for="enamn">Efternamn</label> <br><br>
+    <input type="text" id="ename" name="enamn"> <br><br>
+    <label for="alder">Ålder</label> <br><br>
+    <input type="number" id="alder" name="alder"> <br><br>
+    <label for="mail">Mailadress</label> <br><br>
+    <input type="mail" id="mail" name="mail"> <br><br>
+    <label for="number">Nummer</label> <br><br>
+    <input type="number" id="phone" name="phone"> <br><br>
+    <label for="bat">Äger du en båt?</label><br><br>
+    <input type="checkbox" id="bat" name="bat"> JA     <input type="checkbox" id="bat" name="bat"> NEJ <br><br>
+    <label for="batplats">Behöver du båtplats?</label><br><br>
+    <input type="checkbox" id="batplats" name="batplats"> JA     <input type="checkbox" id="batplats" name="batplats"> NEJ <br><br>
+    <label for="varvsplats">Behöver du varvsplats?</label><br><br>
+    <input type="checkbox" id="varvsplats" name="varvsplats"> JA     <input type="checkbox" id="varvsplats" name="varvsplatsplats"> NEJ <br><br>
+    <a href="" class="button">&nbsp;Skicka&nbsp;</a>
+
+  </form>
   </iframe>
   <br>  
 
