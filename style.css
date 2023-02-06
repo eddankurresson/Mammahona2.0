@@ -1,5 +1,3 @@
-
-
     .item1 { grid-area: headerleft; padding-left: 100px;}
     .item2 { grid-area: headermiddle; justify-content: center; text-align: center;}
     .item3 { grid-area: headerright; }
@@ -41,7 +39,9 @@
       height: 450px;
       
       }
-      
+      #mobilefooter{
+        box-shadow: 0 50vh 0 50vh #BFE4F4;
+      }
     
     @media only screen and (max-width: 850px) {
         .item1{
@@ -64,8 +64,6 @@
          padding: 0px;
         }
         
-        
-        
        
         #desktop{
         display: none;    }
@@ -81,7 +79,16 @@
         #mobilefooter{
         box-shadow: none;
       }
-      } 
+    } 
+    @media print{
+        #mobilefooter{
+            box-shadow: none;
+        }
+        a:link{
+            visibility: hidden;
+        }
+    }
+    
       a:link {
       color: #060101;
       font-size: 15px;
