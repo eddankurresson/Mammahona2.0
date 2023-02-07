@@ -34,12 +34,18 @@
       #mobilepicture{
           max-width: 100%;
       }
+      #mobilepicture1{
+        max-width: 100%;
+    }
       #mobilemaps{
       width: 600px;
       height: 450px;
       
       }
-      #mobilefooter{
+      #mobilefooterleft{
+        box-shadow: 0 30vh 0 30vh #BFE4F4;
+      }
+      #mobilefooterright{
         box-shadow: 0 30vh 0 30vh #BFE4F4;
       }
     
@@ -67,23 +73,36 @@
        
         #desktop{
         display: none;    }
+        #desktop1{
+          display: none;    }
         #mobile{
         visibility: visible;  }
         #mobilepicture{
         max-width: 75%;
         }
+        #mobilepicture1{
+          max-width: 75%;
+          }
         #mobilemaps{
           width: 300px;
           height: 225px;
         }
-        #mobilefooter{
-        box-shadow: none;
+        #mobilefooterleft{
+          box-shadow: none;
       }
+
+      #mobilefooterright{
+        box-shadow: none;
+    }
     } 
     @media print{
-        #mobilefooter{
-            box-shadow: none;
-        }
+      #mobilefooterleft{
+        box-shadow: none;
+    }
+
+    #mobilefooterright{
+      box-shadow: none;
+  }
         a:link{
             visibility: hidden;
         }
