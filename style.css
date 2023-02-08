@@ -43,10 +43,10 @@
       
       }
       #mobilefooterleft{
-        box-shadow: 0 30vh 0 30vh #BFE4F4;
+        box-shadow: 0 10vh 0 10vh #BFE4F4;
       }
       #mobilefooterright{
-        box-shadow: 0 30vh 0 30vh #BFE4F4;
+        box-shadow: 0 10vh 0 10vh #BFE4F4;
       }
     
     @media only screen and (max-width: 850px) {
