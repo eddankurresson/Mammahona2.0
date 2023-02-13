@@ -7,7 +7,38 @@
 <title>NSS</title>
 <html>
 </head>
-
+<style>
+  .grid-container{
+    grid-template-areas: 
+    'headerleft headermiddle headermiddle headermiddle headermiddle headerright'
+    'leftwelcome leftwelcome leftwelcome rightwelcome rightwelcome rightwelcome'
+    'leftinfo leftinfo leftinfo rightinfo rightinfo rightinfo'
+    'articlemiddle articlemiddle articlemiddle articleright articleright articleright'
+    'footerleft footerleft footerleft footerright footerright footerright';;
+  }
+  @media only screen and (max-width: 850px) {
+        .item1{
+          padding-left: 0px;
+        }
+        .grid-container{
+          grid-template-areas:
+          'headerleft'
+          'headermiddle'
+          'headerright'
+          'leftwelcome'
+          'rightwelcome'
+          'leftinfo'
+          'rightinfo'
+          'articlemiddle'
+          'articleright'
+          'footerleft'
+          'footerright';
+          text-align: center;
+          align-items: center;
+         padding: 0px;
+        }
+    }
+</style>
 <body>
 
 <div class="grid-container">
@@ -107,6 +138,33 @@
 
 
   <br>
+  </div>
+ 
+  <div class=item11 style="background-color: #BFE4F4;">
+    <script>
+      function bildbyte()
+      { 
+        var x = Math.floor(Math.random()*3);
+        if(x==0){
+          var y = "files/windsurf.jpeg"
+        }
+        else if (x==1){
+          var y = "files/logga.png"
+        }
+        else{
+            var y="files/piratbat.png"
+        }
+        document.getElementById("bild").src=y;
+      }
+      </script>
+    <img id="bild" src="files/piratbat.png">
+  <p><input type="button" value="Byt bild!" onclick="bildbyte()"></p>
+</body>
+  </div>
+  <div class="item12" style="background-color: #BFE4F4" >
+    <h1>Bilder från lägret</h1>
+    <br>
+    <h2>Här har vi en slideshow med bilder från förra lägret. Tryck på knappen så får du lite olika bilder.</h2>
   </div>
 
   
