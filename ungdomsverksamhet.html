@@ -157,14 +157,70 @@
         document.getElementById("bild").src=y;
       }
       </script>
-    <img id="bild" src="files/piratbat.png">
-  <p><input type="button" value="Byt bild!" onclick="bildbyte()"></p>
-</body>
+    <img style="padding-left: 30px; padding-top: 30px;" id="bild" src="files/piratbat.png">
+    <p><input type="button" value="Slumpa bild!" onclick="bildbyte()"></p>
   </div>
+
   <div class="item12" style="background-color: #BFE4F4" >
-    <h1>Bilder från lägret</h1>
+    <script>
+      function textfarg()
+      { 
+        var x = document.getElementById("textinput").value;;
+       
+        switch(x){
+          case 'gul' || 'Gul' || 'GUL':
+          bytfarg('yellow')
+            break;
+          case 'röd' || 'Röd' || 'RÖD':
+            bytfarg('red')
+            break
+          case 'blå' || 'Blå' || 'BLÅ':
+            bytfarg('blue')
+            break;
+          case 'orange' || 'Orange' || 'ORANGE':
+            bytfarg('orange')
+            break;
+          case 'lila' || 'Lila' || 'LILA':
+            bytfarg('purple')
+            break;
+          case 'rosa' || 'Rosa' || 'ROSA':
+            bytfarg('pink')
+            break;
+          case 'grön' || 'Grön' || 'GRÖN':
+            bytfarg('green')
+
+            break;
+          case 'svart' || 'Svart' || 'SVART':
+            bytfarg('black')
+            break;
+          case 'vit' || 'Vit' || 'VIT':
+            bytfarg('white')
+            break;
+          case 'guld' || 'Guld' || 'GULD':
+            bytfarg('gold')
+            break;
+          default: 
+          document.getElementById("fargnu").innerHTML = "Den färgen finns inte möjlig.";
+          document.getElementById("gifen").src="files/giphy.gif"
+        }
+      }
+      function bytfarg(y){
+        document.getElementById("fargtext").style.color=y
+        document.getElementById("fargnu").innerHTML = y;
+        document.getElementById("fargnu").style.color=y;
+        document.getElementById("gifen").src="files/gipher.gif";
+
+      }
+      </script>
+    
+    <h1>Lekhörna</h1>
     <br>
-    <h2>Här har vi en slideshow med bilder från förra lägret. Tryck på knappen så får du lite olika bilder.</h2>
+    <h2 id="fargtext"> Passa på och lek med lite coola funktioner Skriv under om du vill att den här färgen byter text Du kan välja mellan gul, röd, blå, orange, lila, rosa, grön, svart, vit och guld</h2>
+   
+    <p><input id="textinput" type="text"></p>
+    <button onclick="textfarg()">Skriv rätt, byt färg</button>
+    <p id = fargnu> Svart </p>
+    <img id="gifen" src="files/gipher.gif">
   </div>
 
   
