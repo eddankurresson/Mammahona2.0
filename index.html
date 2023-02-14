@@ -13,7 +13,7 @@
     year = date.getFullYear();
     month = date.getMonth() + 1;
     day = date.getDate();
-    document.getElementById("currentdate").innerHTML = "Dagens datum " + day + "/" + month + "/" + year;
+    document.getElementsByClassName("currentdate")[0].innerHTML = "Dagens datum " + day + "/" + month + "/" + year;
     if (e.target.classList.contains('date')) {
     		//	Content of date which is hovered
         var $target = e.target.nextElementSibling;
@@ -40,6 +40,7 @@
     }
 
 };
+
 </script>
 </head>
 <body>
@@ -124,7 +125,7 @@
         
    <img src="https://bildix.mmcloud.se/bildix/api/images/kpTnboHCr3OqY3sieb1QTf2sq0k.jpeg?fit=crop&w=980&h=551" id="mobilepicture1" alt="" class="date">
    <div class = "floattext">
-    <h2 id="currentdate"></h2>
+    <h2 class="currentdate"></h2>
     <h2>Uppladdat datum 10/2/23</h2>
   </div>
 
@@ -229,6 +230,7 @@
    &nbsp; &nbsp; &nbsp; &nbsp;Christine Titti Åhlander <br>
    &nbsp; &nbsp; &nbsp; &nbsp;Per Gillfjärd <br>
    &nbsp; &nbsp; &nbsp; &nbsp;E-mail: info@nhss.info <br><br> <br> <br>
+   
   </div>
   <!--
 
@@ -238,7 +240,9 @@
    --> 
   <div class="item15" style="background-color: #BFE4F4;" id="mobilefooterright">
    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.4562557675717!2d17.941270816054566!3d58.89023678150737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f5ea05a12739b%3A0x95f7354abfef82c7!2sNyn%C3%A4shamns%20Segels%C3%A4llskap!5e0!3m2!1ssv!2sse!4v1674645100008!5m2!1ssv!2sse" id="mobilemaps" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
   </div>
+  
 </div>
 
 </body>
