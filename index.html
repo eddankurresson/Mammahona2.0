@@ -7,7 +7,40 @@
 <link rel="icon" type="image/x-icon" href="files/logga.png">
 <title>NSS</title>
 
+<script>
+  window.onmousemove = function(e) {
+    date = new Date();
+    year = date.getFullYear();
+    month = date.getMonth() + 1;
+    day = date.getDate();
+    document.getElementById("currentdate").innerHTML = "Dagens datum " + day + "/" + month + "/" + year;
+    if (e.target.classList.contains('date')) {
+    		//	Content of date which is hovered
+        var $target = e.target.nextElementSibling;
+        
+        //	Only work with hovered target
+        //	Add visible class hovered elem to distinguish
+        if (!$target.classList.contains('visible')) {
+        		$target.classList.add('visible');
+        } else {
+            //	Get viewport offset of tooltip element
+            var offset = $target.parentElement.getBoundingClientRect();
+            //	Tooltip distance from mouse(px)
+            var tipDist = 15;
+            //	Calc and set new tooltip location
+            $target.style.top = (e.clientY - offset.top + tipDist) + 'px';
+            $target.style.left = (e.clientX - offset.left + tipDist) + 'px';
+        }
+    } else {
+    		//	Remove visible class
+        var floattext = document.getElementsByClassName('floattext');
+        for (var i = 0; i < floattext.length; i++) {
+        		floattext[i].classList.remove('visible');
+        }
+    }
 
+};
+</script>
 </head>
 <body>
 
@@ -71,7 +104,9 @@
             </h2>
   </div>
   <div class="item7" style="background-color: #BFE4F4;">
-    <H1> Senaste styrelsemötet och nya listor <br></H1>
+    
+    <H1 class=> Senaste styrelsemötet och nya listor <br></H1>
+    
     <h2>
       Här är informationen från senaste styrelsemötet. Vi har kommit fram till många olika saker. Bland annat det första det andra och det tredje. Listor har också kommit ut för isättning av båtar samt bryggvakt.
     </h2>
@@ -84,11 +119,14 @@
   <div class="item8" style="background-color: #BFE4F4;">MiddleInfo
   </div>
   -->  
-  <div class="item9" style="background-color: #BFE4F4;"> 
+  <div class="item9 datecursor" style="background-color: #BFE4F4;"> 
    <br>
         
-   <img src="https://bildix.mmcloud.se/bildix/api/images/kpTnboHCr3OqY3sieb1QTf2sq0k.jpeg?fit=crop&w=980&h=551" id="mobilepicture1" alt="">
-
+   <img src="https://bildix.mmcloud.se/bildix/api/images/kpTnboHCr3OqY3sieb1QTf2sq0k.jpeg?fit=crop&w=980&h=551" id="mobilepicture1" alt="" class="date">
+   <div class = "floattext">
+    <h2 id="currentdate"></h2>
+    <h2>Uppladdat datum 10/2/23</h2>
+  </div>
 
   <br>
   </div>

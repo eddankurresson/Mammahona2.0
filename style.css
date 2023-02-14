@@ -315,3 +315,27 @@
     .toggle:focus ~ .list .list-item {
       transform: translateX(0);
     }
+
+    .datecursor {
+      position: relative;
+    }
+    
+    .floattext {
+      position: absolute;
+      top: 0px;
+      left: 75px;
+      opacity: 0;
+      transition: opacity .5s ease-in;
+    }
+    
+    .floattext h2 {
+      margin: 0;
+    }
+    
+    .date:hover + .floattext {
+      opacity: 1;
+    }
+    
+    .specificLocation {
+      margin-left: 100px;
+    }
