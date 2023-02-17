@@ -7,7 +7,31 @@
 <link rel="icon" type="image/x-icon" href="files/logga.png">
 <title>NSS</title>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+</script>
+<script>
+  $(document).ready(function a(){
+    $("#button1").click(function b(){
+      $("#text1").fadeTo("slow", 0.15);
+      $("#text2").fadeTo("slow", 0.4);
+    });
+  });
+  $(document).ready(function c(){
+    $("#button2").click(function(){
+      $("#text1").fadeTo("slow", 1);
+      $("#text2").fadeTo("slow", 1);
+    });
+  });
+  $(document).ready(function(){
+  $("#button3").click(function(){
+    var div = $("#mobilepicture");
+    div.animate({height: '+=50%', opacity: '0.4'}, "slow");
+    div.animate({width: '+=50%', opacity: '0.4'}, "slow");
+    div.animate({height: '-=50%', opacity: '1'}, "slow");
+    
+  });
+});
+  </script>
 </head>
 <body>
 
@@ -63,13 +87,16 @@
   -->
   <div class="item6" style="background-color: #BFE4F4;">
     <br>
-    <H1>Vision och Mål</H1>
-    <h2> <br> <br>
+    <H1 id="text1">Vision och Mål</H1>
+    <br> <br> <h2 id="text2"> 
 Sällskapets ändamål är att verka för ett aktivt båtliv för medlemmar i alla åldrar. 
 Med en verksamhet präglad av god etik och ett gott kamrat- och sjömanskap skall medlemmars intressen och behov av
 t.ex. tävlings-, brygg- och varvsverksamhet tillvaratas och tillgodoses till för medlemmarna rimliga insatser och kostnader.
 
             </h2>
+            <button id="button1">Cool effekt till texten</button> <button id="button2">Få Tillbaka Texten.</button>
+              <button id="button3">Stretcha bilden</button>
+<br><br>
   </div>
   <div class="item7" style="background-color: #BFE4F4;">
     <H1> Sponsring <br></H1>
